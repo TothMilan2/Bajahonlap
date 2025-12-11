@@ -1,7 +1,7 @@
 :root {
     --a: #11252C;;
     --b: #2B3238;
-    --c: #d3d1d1;
+    --c: #042ad6;
     --d:#181818;
     --s: #2e302f;
     --f: #181818;
@@ -23,6 +23,23 @@ body {
 
 main {
     flex: 1;
+}
+
+a{
+    text-decoration:underline;
+    color:var(--text-color);
+}
+a:active{
+    color:var(--text-color);
+}
+a:link{
+    color:var(--text-color);
+}
+a:visited{
+    color: var(--text-color);
+}
+a:hover{
+    color: var(--text-color);
 }
 
 /*header*/
@@ -104,7 +121,7 @@ main {
 }
 
 .social-icons svg:hover{
-    color: var(--s);
+    color: var(--text-color);
 }
 /*ikonok*/
 /*footer*/
