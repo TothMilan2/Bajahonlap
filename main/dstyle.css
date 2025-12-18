@@ -1,6 +1,6 @@
 @font-face {
     font-family: Raleway;
-    src: url("/Bajahonlap/Fonts/Raleway-VariableFont_wght.ttf");
+    src: url("/Fonts/static/Raleway-Light.ttf");
 }
 
 :root {
@@ -149,13 +149,37 @@ header{
     justify-content: left;
     margin-left: 5%;
 }
+
+/*Latnivalók*/
 .latnivalok{
     font-family: Raleway;
     background-color: #11252C;
     display: flex;
     color: white;
     margin-bottom: 10%;
+    height: 50%;
+    padding: 10px;
 }
-.latnivalok p{
+#pic_container{
+    gap: 100px;
+    margin-left: 5%;
+    padding: 0;
+    align-self: center;
     
 }
+.latnivalo{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+}
+
+/*Felfedezés*/
+
+.Felfedezes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5%;
+}
+
