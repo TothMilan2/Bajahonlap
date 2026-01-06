@@ -61,7 +61,7 @@ a:hover{
 #footer-content{
     padding: 1rem 5rem;
     background-color: var(--a);
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -107,7 +107,7 @@ a:hover{
 #footer-icons{
     /*padding: 0 0 0 3.5rem;*/
     background-color: var(--a);
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -186,14 +186,27 @@ a:hover{
     
 }
 
-#latnivalok_box1, #latnivalok_box2, #latnivalok_box3{
+#latnivalok_box{
     text-align: center;
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 15px;
     width: 100%;
     background-color: var(--a);
     color: white;
+    height: 19rem;
+}
 
+#megtekitentesGomb{
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+    border: 1px solid white;
+    margin-top: 15px;
+}
+
+#petofiszigetKep{
+    width: 17rem;
 }
 
 /*Látnivalók*/
