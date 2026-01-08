@@ -17,7 +17,7 @@
 }
 
 html, body {
-    height: 100%;
+    height: fit-content;
     margin: 0;
     
 }
@@ -112,7 +112,7 @@ header{
 #footer-icons{
     /*padding: 0 0 0 3.5rem;*/
     background-color: var(--a);
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -153,6 +153,18 @@ header{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/*Ismertető*/
+#Ismerteto{
+    margin-bottom: 30px;
+}
+#ismerteto_kep{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
 /*Latnivalók*/
 .latnivalok{
     font-family: Raleway;
