@@ -26,10 +26,10 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-
+*/
 main {
-    flex: 1;
-}*/
+   margin: 0;
+}
 
 
 
@@ -66,7 +66,7 @@ header{
 #footer-content{
     padding: 1rem 5rem;
     background-color: var(--a);
-    position: relative;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -153,18 +153,6 @@ header{
     background-repeat: no-repeat;
     background-position: center;
 }
-
-/*Ismertető*/
-#Ismerteto{
-    margin-bottom: 30px;
-}
-#ismerteto_kep{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-
-
 /*Latnivalók*/
 .latnivalok{
     font-family: Raleway;
@@ -175,19 +163,14 @@ header{
     height: 50%;
     padding: 10px;
 }
-#pic_container{
-    gap: 100px;
-    margin-left: 5%;
-    padding: 0;
-    align-self: center;
-    
+.first_text{
+    width: 50%;
 }
-.latnivalo{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 40px;
-}
+*/
+/*Latnivalók*/
+
+
+
 
 /*Felfedezés*/
 
