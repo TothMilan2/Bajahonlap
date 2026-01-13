@@ -172,7 +172,7 @@ a:hover{
   
 /*Adatvédelem*/
 /*Látnivalók*/
-#latnivalok_content{
+#latnivalok_main{
     background-image: url(img/hatter2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -182,9 +182,6 @@ a:hover{
     background-color: rgba(255, 31, 31, 0.164);
     margin: 0;
     padding: 1rem;
-}
-
-#latnivalok_main{
     text-align: center;
 }
 
@@ -203,6 +200,14 @@ a:hover{
     background-color: transparent;
     padding: 5px;
     color: white;
+    border: 1px solid white;
+    margin-top: 15px;
+}
+
+#megtekitentesGomb:hover{
+    background-color: white;
+    padding: 5px;
+    color: black;
     border: 1px solid white;
     margin-top: 15px;
 }
