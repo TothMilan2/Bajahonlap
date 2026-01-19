@@ -193,7 +193,7 @@ a:hover{
     width: 100%;
     background-color: var(--a);
     color: white;
-    height: 20rem;
+    height: 23rem;
 }
 
 #megtekitentesGomb{
@@ -219,6 +219,10 @@ a:hover{
 #latnivalok_kep2{
     width: 16.5rem;
     height: 12rem;
+}
+
+#latnivalok_main h3{
+   padding-bottom: 1rem;
 }
 /*Látnivalók*/
 /*media - xs(0-576) sm(576-768) md(768-992) lg(992-1200) xl(1200-1400)*/
