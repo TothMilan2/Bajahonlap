@@ -152,3 +152,10 @@ a:hover{
   }
 
 
+  #esemenygomb{
+    background-color: #11252C;
+    color: white;
+    border: 0;
+    width: 35%;
+    height: 40px;
+  }
