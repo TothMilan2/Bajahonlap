@@ -1,12 +1,12 @@
-let mybutton = document.getElementById("myBtn");
+let felGomb = document.getElementById("felGomb");
 
 window.onscroll = function() {gorgetes()};
 
 function gorgetes() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    felGomb.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    felGomb.style.display = "none";
   }
 }
 
