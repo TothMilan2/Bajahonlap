@@ -16,12 +16,18 @@
 }
 
 html, body {
-    height: 120%;
+    height: fit-content;
     margin: 0;
-    padding: 0;
-    background-image: url(/képek/esemenyBGDesktop.png);
-    background-repeat: no-repeat;
+    width: 100%;
+    
 }
+
+
+main {
+   margin: 0;
+   height: 100%;
+}
+
 
 /*linkek*/
 a{
@@ -55,7 +61,7 @@ a:hover{
 #footer-content{
     padding: 1rem 5rem;
     background-color: var(--a);
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -101,7 +107,7 @@ a:hover{
 #footer-icons{
     /*padding: 0 0 0 3.5rem;*/
     background-color: var(--a);
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -133,13 +139,22 @@ a:hover{
 /*ikonok*/
 /*footer*/
 
+.fooldal_hatter{
+    background-image: url(/changename/Boriszmappa/img/hatter2.jpg);
+    width: 100%;
+    height: 30rem;
+    text-align:left;
+    padding: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*negyzet*/
+
+
 .center-box {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1600px; 
+
+
+    width: 70%; 
     height: 600px; 
     background-color: rgba(0, 0, 0, 0.8); 
     color: white;
