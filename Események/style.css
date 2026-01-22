@@ -25,7 +25,13 @@ html, body {
 
 main {
    margin: 0;
+   padding-bottom: 10%;
    height: 100%;
+   background-image: url(/képek/esemenyBG.png) ;
+  
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 80%;
 }
 
 
@@ -156,7 +162,8 @@ a:hover{
 
     width: 70%; 
     height: 600px; 
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color:#0D313D; 
+    opacity: 0.8;
     color: white;
     display: flex;
     justify-content: center;
@@ -168,9 +175,21 @@ a:hover{
 
 
   #esemenygomb{
-    background-color: #11252C;
+    background-color: #11252C;  
     color: white;
     border: 0;
     width: 35%;
     height: 40px;
   }
+
+
+.esemeny_neve{
+    background-image: linear-gradient(#ffffff 0 0);
+    background-position: bottom left; 
+    background-size: 80% 2px; /*Adjust the background size to control length and height*/
+    background-repeat:no-repeat;
+    padding-bottom: 10px; /* this can also control the position */ 
+    width: 300px;
+    text-align: left;
+
+}
