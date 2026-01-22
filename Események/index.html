@@ -9,93 +9,105 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar fixed-top" style="background-color: #11252C;">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: white;">Baja</a>
-      
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon " ></span>
-            </button>
-      
-            <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto align-items-center">
+  <header>
+    <nav class="navbar" style="background-color: #11252C;">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#" style="color:white;">Baja</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+  
+      <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto align-items-center">
               <li class="nav-item">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-secondary" type="submit" style="margin: 0 1rem 0 0;">Search</button>
+                  </form>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link active" aria-current="page" href="#" style="color:white;">Látnivalók</a>
+                  <a class="nav-link active" aria-current="page" href="#" style="color:white;">Látnivalók</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
+                  <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
+                  <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
               </li>
-            </ul>
-      
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-              style="background-color:#11252C; color:white; width:300px;">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Baja</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="color:white;">Látnivalók</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
-                  </li>
-                </ul>
-                <form class="d-flex mt-3" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-
-
-
-
-      <div class="row board-container">
-        <div class="center-box">
-            <div class="" >
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"><img src="/képek/Calendar.png" alt=""></div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"><img src="/képek/Calendar.png" alt=""></div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"><img src="/képek/Calendar.png" alt=""></div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"><img src="/képek/Calendar.png" alt=""></div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4"><img src="/képek/Calendar.png" alt=""></div>
-              
-            </div>
-            <div class="">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">Program neve</div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">Program neve</div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">Program neve</div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">Program neve</div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">Program neve</div>
-            </div>
-            <div class="">
-                <button id="esemenygomb">Naptárhoz</button>
-                <button id="esemenygomb">Naptárhoz</button>
-                <button id="esemenygomb">Naptárhoz</button>
-                <button id="esemenygomb">Naptárhoz</button>
-                <button id="esemenygomb">Naptárhoz</button>
-            </div>
-           
+      </ul>
+  
+  
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+        style="background-color:#11252C; color:white; width:300px;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Baja</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../changename/Boriszmappa/adatvedelemi.html" style="color:white;">Látnivalók</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-secondary" type="submit">Search</button>
+          </form>
         </div>
       </div>
+
+    </div>
+  </nav>
+ 
+  <section class="fooldal_hatter">
+    <h1>Baja</h1>
+  </section>
+ 
+</header>
+
+
+
+  <main >  
+     <div class="row board-container" style="justify-content: center; margin-top: 10%;">
+      <div class="center-box">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div ><img src="/képek/Calendar.png" alt=""></div>
+            <div ><img src="/képek/Calendar.png" alt=""></div>
+            <div ><img src="/képek/Calendar.png" alt=""></div>
+            <div ><img src="/képek/Calendar.png" alt=""></div>
+            <div ><img src="/képek/Calendar.png" alt=""></div>
+            
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div>Program neve</div>
+            <div>Program neve</div>
+            <div>Program neve</div>
+            <div>Program neve</div>
+            <div>Program neve</div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" >
+                <div class="row"><button id="esemenygomb">Naptárhoz</button>
+                <div  class="row"> <button id="esemenygomb">Naptárhoz</button></div>
+                <div  class="row"><button id="esemenygomb">Naptárhoz</button></div>
+                <div  class="row"> <button id="esemenygomb">Naptárhoz</button></div>
+                <div  class="row"> <button id="esemenygomb">Naptárhoz</button></div></div>
+          </div>
+         
+      </div>
+    </div>
+  </main>
+   
+
+
+      
 
 
       
@@ -114,12 +126,7 @@
               <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="footer-oszlop3">
                 <h5>Szerzői jogok</h5>
                 <p style="font-size: 0.8rem; margin-bottom: 10px;"><a  href="adatvedelemi.html">Adatvédelmi szabályzat</a></p>
-                <!--<form id="newsletter-form" action="subscribe.php" method="post">
-                    <div class="footer-emailbox">
-                        <input type="email" class="footer-emailmezo" id="email" name="email" placeholder="pelda@mind.fit" autocomplete="off" required>
-                        <input class="footer-emailgomb" value="Küldés" type="submit">
-                    </div>
-                </form>-->
+                
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="footer-oszlop2">
               <h5>Elhelyezkedés</h5>
