@@ -155,15 +155,29 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+ }
 
 
 #kozepre_doboz {
-    width: 70rem; 
+    width: 100rem; 
     background-color: var(--b); 
     border-radius: 10px; 
+    padding: 100px;
 }
 
 
+/*Képek rendezése*/
+#ElsoKepJobb{
+    margin-left: -20px;
+    z-index: 1;
+}
+#ElsoKepBal{
+    z-index: 2;
+}   
+
+#MasodikKepBal{
+    margin-left: -200px;
+    margin-top: 180px;
+}
 
 /*többi*/
