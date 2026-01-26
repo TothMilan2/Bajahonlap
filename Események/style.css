@@ -18,7 +18,8 @@
 html, body {
     height: fit-content;
     margin: 0;
-    width: 100%;
+    padding: 0;
+    
     
 }
 
@@ -147,29 +148,32 @@ a:hover{
 
 .fooldal_hatter{
     background-image: url(/changename/Boriszmappa/img/hatter2.jpg);
-    width: 100%;
-    height: 30rem;
-    text-align:left;
-    padding: 3rem;
-    background-repeat: no-repeat;
+
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    color: black;
 }
 /*negyzet*/
-
-
-.center-box {
-
-
+.box{
     width: 70%; 
     height: 600px; 
     background-color:#0D313D; 
-    opacity: 0.8;
     color: white;
+}
+
+
+.center-box {    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     border-radius: 10px; 
+    gap: 15%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 
@@ -181,6 +185,10 @@ a:hover{
     width: 35%;
     height: 40px;
   }
+  #esemenygomb:hover{
+    opacity: 0.7;
+    transition: 0.4s;
+  }
 
 
 .esemeny_neve{
@@ -189,7 +197,14 @@ a:hover{
     background-size: 80% 2px; /*Adjust the background size to control length and height*/
     background-repeat:no-repeat;
     padding-bottom: 10px; /* this can also control the position */ 
-    width: 300px;
+    width: 430px;
     text-align: left;
 
+}
+#gombok{
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    height: 100%;
+    justify-content: center;
 }
