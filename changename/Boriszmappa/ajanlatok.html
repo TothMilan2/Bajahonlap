@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baja látnivalók</title>
+    <title>Baja éttermei és vendéglői</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="latnivalok_hatter">
+
   <button onclick="oldalTetejere()" id="felGomb" title="Fel">
     <svg class="svgIcon" viewBox="0 0 384 512">
       <path
         d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
       ></path>
     </svg>
-</button>
+  </button>
+
+
+
   <header>
     <nav class="navbar" style="background-color: #11252C;">
       <div class="container-fluid">
@@ -34,10 +38,10 @@
                   </form>
               </li>
               <li class="nav-item me-3">
-                  <a class="nav-link active" aria-current="page" href="#" style="color:white;">Látnivalók</a>
+                  <a class="nav-link active"  href="latnivalok.html" style="color:white;">Látnivalók</a>
               </li>
               <li class="nav-item me-3">
-                  <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
+                  <a class="nav-link" aria-current="page" href="ajanlatok.html" style="color:white;">Ajánlatok</a>
               </li>
               <li class="nav-item me-3">
                   <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
@@ -54,10 +58,10 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" style="color:white;">Látnivalók</a>
+              <a class="nav-link active"  href="latnivalok.html" style="color:white;">Látnivalók</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
+              <a class="nav-link" aria-current="page" href="ajanlatok.html" style="color:white;">Ajánlatok</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
@@ -78,26 +82,91 @@
 </header>
 
 
-<main id="latnivalok_main">
+<main id="ajanlatok_main">
 
 
 
   <div class="container-fluid">
       <div class="row">
           <div class="col-12">
-              <h1>Ajánlatok</h1>
+              <h1>Éttermek és vendéglők</h1>
           </div>
       </div>    
   </div>
   <div class="container-fluid">
       <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
-              <div id="latnivalok_box">
-                  <h3>Türr István-kilátó</h3>
-                  <img src="img/turrkilato.jfif" alt="" id="latnivalok_kep2">
-                  <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
-              </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+          <div id="ajanlatok_card">
+            <div id="ajanlatok_box1">
+              <h3></h3>
+            </div>
+            <div id="ajanlatok_box2">
+              <img src="" alt="" id="">
+              <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
+            </div>
           </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+          <div id="ajanlatok_card">
+            <div id="ajanlatok_box1">
+              <h3></h3>
+            </div>
+            <div id="ajanlatok_box2">
+              <img src="" alt="" id="">
+              <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+          <div id="ajanlatok_card">
+            <div id="ajanlatok_box1">
+              <h3></h3>
+            </div>
+            <div id="ajanlatok_box2">
+              <img src="" alt="" id="">
+              <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+          <div id="ajanlatok_card">
+            <div id="ajanlatok_box1">
+              <h3></h3>
+            </div>
+            <div id="ajanlatok_box2">
+              <img src="" alt="" id="">
+              <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+          <div id="ajanlatok_card">
+            <div id="ajanlatok_box1">
+              <h3></h3>
+            </div>
+            <div id="ajanlatok_box2">
+              <img src="" alt="" id="">
+              <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+          <div id="ajanlatok_card">
+            <div id="ajanlatok_box1">
+              <h3></h3>
+            </div>
+            <div id="ajanlatok_box2">
+              <img src="" alt="" id="">
+              <button id="megtekitentesGomb">Megtekintés <span style="font-size: 15px;">&#129034;</span></button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
       </div>
     </div>
 
