@@ -162,37 +162,15 @@ a:hover{
     width: 100rem; 
     background-color: var(--b); 
     border-radius: 10px; 
-    padding: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     font-size: 25px;
 }
 
 
 /*Képek rendezése*/
-#ElsoKepJobb{
-    margin-left: -20px;
-    z-index: 1;
-}
-#ElsoKepBal{
-    z-index: 2;
-}   
-
-#MasodikKepBal{
-    margin-left: -200px;
-    margin-top: 180px;
-}
-
-#HarmadikKepBal{
-    float: right;
-    z-index: 2;
-
-}
-#HarmadikKepJobb{
-
-    margin-top: -450px;
-    z-index: 1;
-
-}
-
 #cim{
     text-align: center;
 }
@@ -205,26 +183,5 @@ a:hover{
 }
 #harom{
     margin-top: 40px;
-}
-
-
-
-
-
-
-/*media query*/
-@media (max-width: 1340px) {
-    #MasodikKepBal{
-        margin-left: 150px;
-        margin-top: -150px;
-    }
-    #ElsoKepJobb{
-        margin-left: 150px;
-        margin-top: -310px;
-        z-index: 1;
-    }
-    #ElsoKepBal{
-        z-index: 2;
-    }   
 }
 /*többi*/
