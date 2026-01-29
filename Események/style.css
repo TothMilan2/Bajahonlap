@@ -165,11 +165,11 @@ a:hover{
     background-color:#0D313D;
     display: flex; 
     flex-direction: column; 
-    padding: 10%; 
+    padding: 5%; 
     gap: 5%;
     text-align: center;
     border-radius: 10px; 
-    opacity: 0.8;
+    background: rgb(0 0 0 / 60%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
   }
 
@@ -182,7 +182,7 @@ a:hover{
     height: 40px;
   }
   #esemenygomb:hover{
-    opacity: 0.7;
+    background-color: rgb(65, 64, 64);
     transition: 0.4s;
   }
 
@@ -198,7 +198,7 @@ a:hover{
     background-size: 80% 2px; /*Adjust the background size to control length and height*/
     background-repeat:no-repeat;
     padding-bottom: 10px; /* this can also control the position */ 
-    width: 430px;
+    width: 100%;
     text-align: left;
 
 }
@@ -206,5 +206,5 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10%;
+    gap: 12%;
 }
