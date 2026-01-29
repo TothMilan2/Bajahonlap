@@ -140,7 +140,7 @@ a:hover{
 /*footer*/
 
 /*többi*/
-#petofisziget_main {
+#Latnivalok_main {
     background-image: url(img/hatter2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -151,7 +151,7 @@ a:hover{
     padding: 1rem;
 }
 
-#Petofi_content{
+#Latnivalok_content{
     display: flex;
     justify-content: center;
     align-items: center;
