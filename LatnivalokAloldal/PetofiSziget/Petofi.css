@@ -140,18 +140,18 @@ a:hover{
 /*footer*/
 
 /*többi*/
-#petofisziget_main {
+#Latnivalok_main {
     background-image: url(img/hatter2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 100vh;
-    color: black;
+    color: white;
     margin: 0;
     padding: 1rem;
 }
 
-#Petofi_content{
+#Latnivalok_content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,6 +163,7 @@ a:hover{
     background-color: var(--b); 
     border-radius: 10px; 
     padding: 100px;
+    font-size: 25px;
 }
 
 
@@ -180,4 +181,50 @@ a:hover{
     margin-top: 180px;
 }
 
+#HarmadikKepBal{
+    float: right;
+    z-index: 2;
+
+}
+#HarmadikKepJobb{
+
+    margin-top: -450px;
+    z-index: 1;
+
+}
+
+#cim{
+    text-align: center;
+}
+#egy{
+    margin-top: 40px;
+
+}
+#ketto{
+    margin-top: 40px;
+}
+#harom{
+    margin-top: 40px;
+}
+
+
+
+
+
+
+/*media query*/
+@media (max-width: 1340px) {
+    #MasodikKepBal{
+        margin-left: 150px;
+        margin-top: -150px;
+    }
+    #ElsoKepJobb{
+        margin-left: 150px;
+        margin-top: -310px;
+        z-index: 1;
+    }
+    #ElsoKepBal{
+        z-index: 2;
+    }   
+}
 /*többi*/
