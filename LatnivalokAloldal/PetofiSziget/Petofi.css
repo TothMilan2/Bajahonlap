@@ -182,11 +182,12 @@ a:hover{
 }
 
 #HarmadikKepBal{
-    float: right;
     z-index: 2;
+    float: right;
 
 }
 #HarmadikKepJobb{
+
 
     margin-top: -450px;
     z-index: 1;
@@ -205,6 +206,7 @@ a:hover{
 }
 #harom{
     margin-top: 40px;
+    padding-right: 0px;
 }
 
 
