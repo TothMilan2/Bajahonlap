@@ -152,8 +152,10 @@ a:hover{
 }
 /*Latnivalók*/
 #Ismerteto_kep{
-    display: flex;
-    justify-content: right;
+    position: relative;
+    width: 100vh;
+    
+   
 }
 #Ismerteto{
     display: flex;
@@ -162,6 +164,19 @@ a:hover{
     
     
 }
+#kep_felso{
+   
+    position: absolute;
+
+    
+}
+#kep_also{
+
+    margin-top: 90px;
+    margin-left: ;
+    position: absolute;
+}
+
 
 .latnivalok{
     font-family: Raleway;
