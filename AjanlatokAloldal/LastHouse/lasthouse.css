@@ -140,7 +140,7 @@ a:hover{
 /*footer*/
 
 /*többi*/
-#Ajanlatok_main {
+#Ajanlatok_main{
     background-image: url(img/hatter2.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -205,9 +205,10 @@ a:hover{
         margin-bottom: 20px;
     }
     #szoveg1{
-        text-align: center;
+        text-align: justify;
     }
     #szoveg2{
+        text-align: justify;
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -215,7 +216,6 @@ a:hover{
 }
 @media (max-width: 400px) {
     #szoveg1{
-        text-align: center;
         padding-left: 1px !important; 
         padding-right: 1px !important;
     }
