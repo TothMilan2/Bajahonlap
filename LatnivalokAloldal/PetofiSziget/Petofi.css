@@ -139,23 +139,35 @@ a:hover{
 /*ikonok*/
 /*footer*/
 
-/*többi*/
-#Latnivalok_main {
+/*Aloldal*/
+#latnivalokAl_main{
     background-image: url(img/hatter2.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: 100% 100%;
     min-height: 100vh;
     color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
     margin: 0;
     padding: 1rem;
+
 }
 
-#Latnivalok_content{
+#fobpx{
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
+
+#latnivalokAl_content{
+    background-color: var(--a);
+}
+
+#latnivalokAl_content h1{
+    text-align: center;
+}
 
 
 #kozepre_doboz {
@@ -182,11 +194,12 @@ a:hover{
 }
 
 #HarmadikKepBal{
-    float: right;
     z-index: 2;
+    float: right;
 
 }
 #HarmadikKepJobb{
+
 
     margin-top: -450px;
     z-index: 1;
@@ -205,9 +218,10 @@ a:hover{
 }
 #harom{
     margin-top: 40px;
+    padding-right: 0px;
 }
 
-
+/*Aloldal*/
 
 
 
