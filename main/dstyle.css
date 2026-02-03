@@ -149,32 +149,52 @@ a:hover{
     padding: 3rem;
     background-repeat: no-repeat;
     background-position: center;
-}
-/*Latnivalók*/
-#Ismerteto_kep{
-    position: relative;
-    width: 100vh;
     
+}
+
+/*Latnivalók*/
+#Ismerteto_kep{ 
+    display: block;
+   align-items: center;
+    width: fit-content;
+    padding: 20px;
    
 }
 #Ismerteto{
     display: flex;
-    justify-content: center;
-    width: 100%;
+    padding: 50px;
+    justify-content: space-between; 
+    height: 100%;
     
     
 }
-#kep_felso{
-   
-    position: absolute;
+@media (max-width:917px) {
+    #Ismerteto{
+      flex-direction: column;
+        padding: 50px;
 
-    
+    }
+    #Ismerteto_kep{
+        
+        margin: auto;
+        width: 100%;
+    }
+    #Ismerteto_szoveg{
+        margin: auto;
+        width: 100%;
+    }
+
+
 }
-#kep_also{
-
-    margin-top: 90px;
-    margin-left: ;
-    position: absolute;
+@media (max-width:517px) {
+    #kep_felso{
+        width: 100%;
+    }
+    #Ismerteto_kep{
+        
+        margin: 0;
+        
+    }
 }
 
 
