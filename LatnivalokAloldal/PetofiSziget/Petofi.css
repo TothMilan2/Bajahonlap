@@ -163,6 +163,7 @@ a:hover{
 
 #latnivalokAl_content{
     background-color: var(--a);
+    padding: 2rem;
 }
 
 #latnivalokAl_content h1{
@@ -180,32 +181,27 @@ a:hover{
 
 
 /*Képek rendezése*/
-#ElsoKepJobb{
-    margin-left: -20px;
-    z-index: 1;
-}
-#ElsoKepBal{
-    z-index: 2;
-}   
-
-#MasodikKepBal{
-    margin-left: -200px;
-    margin-top: 180px;
+#latnivalokAl_kep1{
+    height: 10rem;
+    width: 20rem;
+    
 }
 
-#HarmadikKepBal{
-    z-index: 2;
-    float: right;
+#latnivalokAl_kep2{
 
 }
-#HarmadikKepJobb{
-
-
-    margin-top: -450px;
-    z-index: 1;
+#latnivalokAl_kep3{
 
 }
+#latnivalokAl_kep4{
 
+}
+#latnivalokAl_kep5{
+
+}
+#latnivalokAl_kep6{
+    
+}
 #cim{
     text-align: center;
 }
@@ -220,7 +216,7 @@ a:hover{
     margin-top: 40px;
     padding-right: 0px;
 }
-
+/*képek rendezése*/
 /*Aloldal*/
 
 
