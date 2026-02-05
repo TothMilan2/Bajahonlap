@@ -1,0 +1,227 @@
+@font-face {
+    font-family: Raleway;
+    src: url(/Fonts/Raleway-VariableFont_wght.ttf);
+}
+:root {
+    --a: #11252C;;
+    --b: #2B3238;
+    --c: #042ad6;
+    --d:#181818;
+    --s: #2e302f;
+    --f: #181818;
+    --base-color: #0f0f0f;  
+    --h:#181818;
+    --text-color: #ffffff;
+    --i: #081c15;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}*/
+
+a{
+    text-decoration:underline;
+    color:var(--text-color);
+}
+a:active{
+    color:var(--text-color);
+}
+a:link{
+    color:var(--text-color);
+}
+a:visited{
+    color: var(--text-color);
+}
+a:hover{
+    color: var(--text-color);
+}
+
+/*header*/
+.navbar-toggler {
+    border-color: white; 
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/*header*/
+
+
+/*footer*/
+#footer-content{
+    padding: 1rem 5rem;
+    background-color: var(--a);
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-emailbox{
+    display: flex;
+    align-items: center;
+}
+
+.footer-emailmezo {
+    min-height: 35px;
+    max-width: 150px;
+    padding: 0 1rem;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 6px 0 0 6px;
+    background-color: transparent;
+}
+
+.footer-emailgomb {
+    min-height: 10px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: var(--s);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+  
+.footer-emailgomb:hover {
+    background-color: var(--d);
+}
+  
+.input:focus, .input:focus-visible {
+    border-color: #3898EC;
+    outline: none;
+}
+/*ikonok*/
+#footer-icons{
+    /*padding: 0 0 0 3.5rem;*/
+    background-color: var(--a);
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-icons{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 0;
+}
+
+.social-icons li{
+    padding: 1.5rem 1rem 0 1rem;
+    list-style-type: none;
+}
+
+.social-icons li:first-child{
+    padding-right: 1rem;
+}
+
+.social-icons a{
+    color: white;
+}
+
+.social-icons svg:hover{
+    color: var(--text-color);
+}
+/*ikonok*/
+/*footer*/
+
+/*többi*/
+#Ajanlatok_main{
+    background-image: url(img/hatter2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+}
+
+#Ajanlatok_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+#kozepre_doboz {
+    background-color: var(--b);
+    border-radius: 10px;
+    padding: 3rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+/*Képek rendezése*/
+#cim{
+    text-align: center;
+}
+#egy{
+    margin-top: 40px;
+
+}
+#ketto{
+    margin-top: 40px;
+}
+#harom{
+    margin-top: 40px;
+}
+
+
+#szoveg1{
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#szoveg2{
+    font-size: 30px;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/*többi*/
+
+
+@media (max-width: 768px) {
+    #kozepre_doboz {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+    #ketto img {
+        margin-bottom: 20px;
+    }
+    #szoveg1{
+        text-align: justify;
+    }
+    #szoveg2{
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+@media (max-width: 400px) {
+    #szoveg1{
+        padding-left: 1px !important; 
+        padding-right: 1px !important;
+    }
+    #szoveg2{
+        padding-left: 1px !important; 
+        padding-right: 1px !important;
+    }
+
+}
