@@ -187,12 +187,9 @@ a:hover{
   }
 
 #esemenyek{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 14%;
+
 }
-.esemeny_neve{
+#esemeny_neve{
     background-image: linear-gradient(#ffffff 0 0);
     background-position: bottom left; 
     background-size: 100% 2px; /*Adjust the background size to control length and height*/
@@ -210,19 +207,15 @@ a:hover{
     
 }
 
-@media  (max-width:778px){
-
-
-    #esemenygomb
-{
-    height: 35px;
-}
-
+@media (max-width: 575px) {
+    #masodiksor{
+        gap: 30px;
+    }
+    #esemenygomb{
+       float: left;
+    }
     #esemenyek{
-        gap: 2%;
+        display: block;
+        justify-content: left;
     }
-    #gombok{
-        gap: 6%;
-    }
-
 }
