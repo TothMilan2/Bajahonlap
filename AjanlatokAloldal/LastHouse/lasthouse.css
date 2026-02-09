@@ -193,8 +193,18 @@ a:hover{
     padding-left: 100px;
     padding-right: 100px;
 }
+#kepkozep{
+    width: 20rem;
+    height: 15rem;
+}
 /*többi*/
 
+@media (max-width: 950px) {
+    #kepkozep{
+        width: 15rem;
+        height: 10rem;
+    }
+}
 
 @media (max-width: 768px) {
     #kozepre_doboz {
