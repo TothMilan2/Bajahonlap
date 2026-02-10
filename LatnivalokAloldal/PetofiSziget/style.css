@@ -214,6 +214,73 @@ a:hover{
 /*ikonok*/
 /*footer*/
 
+/*Látnivalók*/
+#latnivalok_main{
+    background-image: url(img/hatter2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    color: black;
+    margin: 0;
+    padding: 0 0 4rem 0;
+    text-align: center;
+}
+
+#latnivalok_main h1{
+    padding: 2rem 0;
+}
+
+#latnivalok_card{
+    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: var(--a);
+    color: white;
+}
+
+#latnivalok_card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    filter: none;
+}
+
+#latnivalok_box1{
+    height: 4.5rem;
+}
+
+#latnivalok_box2{
+    height: 16rem;
+}
+
+#megtekitentesGomb{
+    background-color: transparent;
+    padding: 5px;
+    color: white;
+    border: 1px solid white;
+    margin-top: 15px;
+}
+
+#megtekitentesGomb:hover{
+    background-color: white;
+    padding: 5px;
+    color: black;
+    border: 1px solid white;
+    margin-top: 15px;
+}
+
+#latnivalok_kep2{
+    width: 20rem;
+    height: 12rem;
+}
+
+
+/*Látnivalók*/
 /*Aloldal*/
 #latnivalokAl_main{
     background-image: url(img/latnivalokAloldalHatter.jpg);
@@ -300,7 +367,7 @@ a:hover{
         right: 0;                   
     }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
 
   .img-stack--parallel {
     padding: 0; 
@@ -335,7 +402,7 @@ a:hover{
     .img-stack--parallel .stack-btn {
         bottom: -46px;          
     }
-}
+}*/
 
     /*keresztbe*/
     .img-stack {
@@ -400,21 +467,421 @@ a:hover{
 /*Aloldal*/
 
 
-
-
-/*media query*/
-@media (max-width: 1340px) {
-    #MasodikKepBal{
-        margin-left: 150px;
-        margin-top: -150px;
+/*media - xs(0-576) sm(576-768) md(768-992) lg(992-1200) xl(1200-1400)*/
+@media only screen and (max-width: 1200px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
     }
-    #ElsoKepJobb{
-        margin-left: 150px;
-        margin-top: -310px;
-        z-index: 1;
+    
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
     }
-    #ElsoKepBal{
-        z-index: 2;
-    }   
+
+    #latnivalok_card h3{
+        font-size: 1.5rem;
+    }
+
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 16rem;
+        height: 12rem;
+    }
+
+    #latnivalok_box1{
+        height: 5rem;
+    }
+    
+    #latnivalok_box2{
+        height: 16rem;
+    }
+
+   
+    #ajanlatok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #ajanlatok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    #ajanlatok_card h3{
+        font-size: 1.5rem;
+    }
+
+    #ajanlatok_kep{
+        width: 16rem;
+        height: 12rem;
+    }
+
+    #ajanlatok_box1{
+        height: 5rem;
+    }
+    
+    #ajanlatok_box2{
+        height: 16rem;
+    }
+    
 }
-/*többi*/
+@media only screen and (max-width: 1100px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 24rem;
+    }
+    
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 16rem;
+        height: 12rem;
+    }
+
+    
+    #ajanlatok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #ajanlatok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 24rem;
+    }
+    
+    #ajanlatok_kep{
+        width: 16rem;
+        height: 12rem;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 18rem;
+        height: 12rem;
+    }
+
+    #latnivalok_box1{
+        height: 4rem;
+        font-size: 3rem;
+    }
+    
+    #latnivalok_box2{
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    
+}
+@media only screen and (max-width: 800px) {
+    
+
+}
+@media only screen and (max-width: 768px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
+    }
+
+    #latnivalok_main h1{
+        padding: 1.5rem 0;
+        font-size: 3rem
+    }
+
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 26rem;
+    }
+    #latnivalok_card h3{
+        font-size: 2rem;
+    }
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 24rem;
+        height: 16rem;
+    }
+
+    #latnivalok_box1{
+        height: 4rem;
+        font-size: 3rem;
+    }
+    
+    #latnivalok_box2{
+        height: 100%;
+    }
+
+    #footer-content{
+        padding: 1rem 2rem 1rem 2rem;
+        background-color: var(--a);
+    }
+
+
+    .img-stack--parallel {
+        padding: 0; 
+      }
+    
+      .img-stack--parallel .stack-btn {
+        top: auto;
+        bottom: -44px;    
+        transform: none;
+      }
+    
+      .img-stack--parallel .stack-btn.prev {
+        left: 35%;
+      }
+    
+      .img-stack--parallel .stack-btn.next {
+        right: 35%;
+      }
+}
+@media only screen and (max-width: 700px) {
+
+
+}
+@media only screen and (max-width: 575px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 26rem;
+    }
+    #latnivalok_card h3{
+        font-size: 1.8rem;
+    }
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 25rem;
+        height: 16rem;
+    }
+
+    #latnivalok_box1{
+        height: 4.5rem;
+    }
+    
+    #latnivalok_box2{
+        height: 100%;
+    }
+
+
+
+    .img-stack--parallel {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-stack--parallel .img-stack-img {
+        width: 100%;
+        height: 200px;
+        margin: 0 !important;
+    }
+
+    .img-stack--parallel .stack-btn {
+        bottom: -46px;          
+    }
+
+}          
+@media only screen and (max-width: 550px) {
+
+ 
+}
+@media only screen and (max-width: 480px) {
+
+
+}
+@media only screen and (max-width: 450px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 26rem;
+    }
+    #latnivalok_card h3{
+        font-size: 1.8rem;
+    }
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 21rem;
+        height: 15rem;
+    }
+
+    #latnivalok_box1{
+        height: 4.5rem;
+    }
+    
+    #latnivalok_box2{
+        height: 100%;
+    }
+
+
+
+
+    #ajanlatok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #ajanlatok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 26rem;
+    }
+    #ajanlatok_card h3{
+        font-size: 1.8rem;
+    }
+    
+    #ajanlatok_kep2{
+        width: 21rem;
+        height: 15rem;
+    }
+
+    #ajanlatok_box1{
+        height: 4.5rem;
+    }
+    
+    #ajanlatok_box2{
+        height: 100%;
+    }
+
+}
+@media only screen and (max-width: 430px) {
+
+}
+@media only screen and (max-width: 392px) {
+    #latnivalok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #latnivalok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 24rem;
+    }
+    #latnivalok_card h3{
+        font-size: 1.8rem;
+    }
+    #megtekitentesGomb{
+        padding: 5px;
+        margin-top: 15px;
+    }
+    
+    #latnivalok_kep2{
+        width: 19rem;
+        height: 14rem;
+    }
+
+    #latnivalok_box1{
+        height: 4.5rem;
+    }
+    
+    #latnivalok_box2{
+        height: 100%;
+    }
+
+
+
+    #ajanlatok_main{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #ajanlatok_card{
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        height: 24rem;
+    }
+    #ajanlatok_card h3{
+        font-size: 1.8rem;
+    }
+    
+    #ajanlatok_kep2{
+        width: 19rem;
+        height: 14rem;
+    }
+
+    #ajanlatok_box1{
+        height: 4.5rem;
+    }
+    
+    #ajanlatok_box2{
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 382px) {
+
+}
+@media only screen and (max-width: 350px) {
+
+}

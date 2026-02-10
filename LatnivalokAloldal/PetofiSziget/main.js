@@ -43,3 +43,36 @@ function oldalTetejere() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+
+/* */
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("#megtekitentesGomb");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const id = button.getAttribute("data-id");
+      loadContent(id);
+    });
+  });
+});
+
+function loadContent(id) {
+  fetch("tartalom.json")
+    .then(response => response.json())
+    .then(data => {
+      const place = data.places.find(p => p.id == id);
+      if (place) {
+        const contentContainer = document.getElementById("latnivalok_main");
+        contentContainer.innerHTML = `
+          <div class="place-details">
+            <h1>${place.title}</h1>
+            <img src="${place.image}" alt="${place.title}">
+            <p>${place.description}</p>
+          </div>
+        `;
+      }
+    })
+    .catch(error => console.error("Error loading content:", error));
+}
