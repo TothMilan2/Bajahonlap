@@ -161,6 +161,10 @@ a:hover{
 /*negyzet*/
 
 
+
+
+
+/*main content*/
 .center-box {    
     background-color:#0D313D;
     display: flex; 
@@ -171,6 +175,7 @@ a:hover{
     border-radius: 10px; 
     background: rgb(0 0 0 / 60%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+
   }
 
 
@@ -186,9 +191,7 @@ a:hover{
     transition: 0.4s;
   }
 
-#esemenyek{
 
-}
 #esemeny_neve{
     background-image: linear-gradient(#ffffff 0 0);
     background-position: bottom left; 
@@ -217,5 +220,17 @@ a:hover{
     #esemenyek{
         display: block;
         justify-content: left;
+    }
+}
+
+
+#esemenykep{
+    float: left;
+}
+
+
+@media (max-width: 849px) {
+    .row{
+        gap: 6%;
     }
 }

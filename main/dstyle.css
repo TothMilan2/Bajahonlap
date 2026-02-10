@@ -19,12 +19,11 @@
 html, body {
     height: fit-content;
     margin: 0;
+    
 
     
 }
-html{
-    width: 100%;
-}
+
 
 
 main {
@@ -33,9 +32,9 @@ main {
 
 #Baja_cim{
 
-    width: 100vh;
+    width: 10%;
     text-align: left;
-    margin-left: 250px;
+  
     position: relative;
     font-family: Raleway;
     font-style: italic;
