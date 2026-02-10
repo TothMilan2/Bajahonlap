@@ -2,6 +2,11 @@
     font-family: Raleway;
     src: url("/Fonts/static/Raleway-Light.ttf");
 }
+@font-face {
+    font-family: Inspiration;
+    src: url("/Fonts/Inspiration-Regular.ttf");
+    font-weight: 200;
+}
 
 :root {
     --a: #11252C;;
@@ -31,12 +36,12 @@ main {
 }
 
 #Baja_cim{
-
+    font-family: Inspiration;
     width: 10%;
-    text-align: left;
-  
-    position: relative;
-    font-family: Raleway;
+    left: 25%;
+    
+    position: absolute;
+    font-size: 3vw;
     font-style: italic;
     
 }
@@ -157,6 +162,7 @@ a:hover{
     padding: 3rem;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
     
 }
 
