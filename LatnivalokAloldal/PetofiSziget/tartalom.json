@@ -1,0 +1,34 @@
+{
+  "places": [
+    {
+      "id": 0,
+      "title": "Türr István-kilátó",
+      "description": "A Türr István-kilátó Baja egyik legszebb kilátóhelye, ahonnan csodálatos panoráma nyílik a városra és a környező tájra.",
+      "image": "img/turrkilato.jfif"
+    },
+    {
+      "id": 1,
+      "title": "Petőfi-sziget",
+      "description": "A Petőfi-sziget Baja egyik legnépszerűbb kirándulóhelye, ahol számos szabadidős tevékenység várja a látogatókat.",
+      "image": "img/petofisziget.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Szentháromság tér",
+      "description": "A Szentháromság tér Baja történelmi központja, ahol gyönyörű épületek és a híres Szentháromság szobor található.",
+      "image": "img/szentharomsagter.jfif"
+    },
+    {
+      "id": 3,
+      "title": "Jelky András tér",
+      "description": "A Jelky András tér egy csendes, nyugodt hely Baja szívében, amely tökéletes a pihenésre és kikapcsolódásra.",
+      "image": "img/jelkyter.jfif"
+    },
+    {
+      "id": 4,
+      "title": "Türr István Múzeum",
+      "description": "A Türr István Múzeum Baja kulturális központja, ahol érdekes kiállítások és történelmi relikviák várják a látogatókat.",
+      "image": "img/turrmuzeum.jpg"
+    }
+  ]
+}
