@@ -1,34 +1,23 @@
 {
   "places": [
     {
-      "id": 0,
+      "id": "1",
       "title": "Türr István-kilátó",
-      "description": "A Türr István-kilátó Baja egyik legszebb kilátóhelye, ahonnan csodálatos panoráma nyílik a városra és a környező tájra.",
+      "description": "A Türr István-kilátó Baja egyik legszebb kilátóhelye.",
       "image": "img/turrkilato.jfif"
     },
     {
-      "id": 1,
-      "title": "Petőfi-sziget",
-      "description": "A Petőfi-sziget Baja egyik legnépszerűbb kirándulóhelye, ahol számos szabadidős tevékenység várja a látogatókat.",
-      "image": "img/petofisziget.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Szentháromság tér",
-      "description": "A Szentháromság tér Baja történelmi központja, ahol gyönyörű épületek és a híres Szentháromság szobor található.",
-      "image": "img/szentharomsagter.jfif"
-    },
-    {
-      "id": 3,
-      "title": "Jelky András tér",
-      "description": "A Jelky András tér egy csendes, nyugodt hely Baja szívében, amely tökéletes a pihenésre és kikapcsolódásra.",
-      "image": "img/jelkyter.jfif"
-    },
-    {
-      "id": 4,
-      "title": "Türr István Múzeum",
-      "description": "A Türr István Múzeum Baja kulturális központja, ahol érdekes kiállítások és történelmi relikviák várják a látogatókat.",
-      "image": "img/turrmuzeum.jpg"
+      "id": "1",
+      "cim": "Petőfi-sziget",
+      "leiras1": "A Petőfi-sziget Baja egyik legkedveltebb és legszebb rekreációs területe, amely a Sugovica kanyargó ágai között elhelyezkedve igazi természetközeli élményt kínál a látogatóknak. A város központjához közel fekvő sziget könnyen megközelíthető, mégis nyugodt, zöld környezetet biztosít azok számára, akik pihenni, sportolni vagy kikapcsolódni érkeznek.",
+      "leiras2": "A szigetet rendezett sétányok, árnyas fák és gondozott parkok jellemzik. Itt található a híres Petőfi-szigeti strand, ahol nyáron fürdőzési lehetőség, vízi sportok és napozóteraszok várják a vendégeket. A sziget nyugati részén található a kajak-kenu és evezős sportélet központja is, ahol rendszeresen zajlanak edzések és versenyek.",
+      "leiras3": "A Petőfi-sziget nemcsak a sporté és a természeté, hanem a közösségi eseményeké is. Nyári fesztiválok, koncertek és családi programok teszik élővé ezt a különleges helyet. A közeli vendéglátóhelyek pedig barátságos hangulattal és bajai halászlével várják a látogatókat.",
+      "kep": "img/petofisziget1.jfif",
+      "kep2" : "img/petofisziget2.jpg" ,
+      "kep3" : "img/petofisziget3.jpg",
+      "kep4" : "img/petofisziget4.jpg",
+      "kep5": "img/petofisziget5.jpg",
+      "kap6": "img/petofisziget6.jpg"
     }
   ]
 }
