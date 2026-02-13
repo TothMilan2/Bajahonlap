@@ -233,10 +233,9 @@ a:hover{
 /*Adatvédelem*/
 
 #adatvedelem_content{
-    margin: 5rem;
     padding: 1rem;
     background-color: var(--a);
-    width: 50rem;
+    width: 100%;
     height: 50rem;
     border-radius: 15px;
     color: var(--text-color);
