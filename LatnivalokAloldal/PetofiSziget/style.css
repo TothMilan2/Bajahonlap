@@ -214,6 +214,58 @@ a:hover{
 /*ikonok*/
 /*footer*/
 
+/*Ajánlatok*/
+#ajanlatok_main{
+    background-image: url(img/ajanlatokhatter.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    color: black;
+    margin: 0;
+    padding: 0 0 4rem 0;
+    text-align: center;
+}
+
+#ajanlatok_main h1{
+    padding: 2rem 0;
+}
+
+.ajanlatok_card{
+    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: var(--a);
+    color: white;
+}
+
+.ajanlatok_card:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    filter: none;
+}
+
+#ajanlatok_box1{
+    height: 4.5rem;
+}
+
+#ajanlatok_box2{
+    height: 16rem;
+}
+
+#ajanlatok_kep{
+    width: 20rem;
+    height: 12rem;
+}
+
+
+
+/*Ajánlatok*/
 /*Látnivalók*/
 #latnivalok_main{
     background-image: url(img/hatter2.jpg);
@@ -234,7 +286,7 @@ a:hover{
     padding: 2rem 0;
 }
 
-#latnivalok_card{
+.latnivalok_card{
     text-align: center;
     border-radius: 10px;
     padding: 1rem;
@@ -244,7 +296,7 @@ a:hover{
     color: white;
 }
 
-#latnivalok_card:hover{
+.latnivalok_card:hover{
     cursor: pointer;
     transform: scale(1.02);
     filter: none;
@@ -258,7 +310,7 @@ a:hover{
     height: 16rem;
 }
 
-#megtekitentesGomb{
+.megtekitentesGomb{
     background-color: transparent;
     padding: 5px;
     color: white;
@@ -266,7 +318,7 @@ a:hover{
     margin-top: 15px;
 }
 
-#megtekitentesGomb:hover{
+.megtekitentesGomb:hover{
     background-color: white;
     padding: 5px;
     color: black;
@@ -474,18 +526,18 @@ a:hover{
         padding: 0;
     }
     
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
     }
 
-    #latnivalok_card h3{
+    .latnivalok_card h3{
         font-size: 1.5rem;
     }
 
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -503,21 +555,27 @@ a:hover{
         height: 16rem;
     }
 
+
    
     #ajanlatok_main{
         margin: 0;
         padding: 0;
     }
     
-    #ajanlatok_card{
+    .ajanlatok_card{
+        text-align: center;
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
+        background-color: var(--a);
+        color: white;
     }
-
-    #ajanlatok_card h3{
-        font-size: 1.5rem;
+    
+    .ajanlatok_card:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: none;
     }
 
     #ajanlatok_kep{
@@ -540,7 +598,7 @@ a:hover{
         padding: 0;
     }
     
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
@@ -548,7 +606,7 @@ a:hover{
         height: 24rem;
     }
     
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -564,7 +622,7 @@ a:hover{
         padding: 0;
     }
     
-    #ajanlatok_card{
+    .ajanlatok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
@@ -583,14 +641,14 @@ a:hover{
         padding: 0;
     }
     
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
     }
     
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -627,17 +685,17 @@ a:hover{
         font-size: 3rem
     }
 
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
         height: 26rem;
     }
-    #latnivalok_card h3{
+    .latnivalok_card h3{
         font-size: 2rem;
     }
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -690,17 +748,17 @@ a:hover{
         padding: 0;
     }
     
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
         height: 26rem;
     }
-    #latnivalok_card h3{
+    .latnivalok_card h3{
         font-size: 1.8rem;
     }
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -750,17 +808,17 @@ a:hover{
         padding: 0;
     }
     
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
         height: 26rem;
     }
-    #latnivalok_card h3{
+    .latnivalok_card h3{
         font-size: 1.8rem;
     }
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -786,14 +844,14 @@ a:hover{
         padding: 0;
     }
     
-    #ajanlatok_card{
+    .ajanlatok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
         height: 26rem;
     }
-    #ajanlatok_card h3{
+    .ajanlatok_card h3{
         font-size: 1.8rem;
     }
     
@@ -820,17 +878,17 @@ a:hover{
         padding: 0;
     }
     
-    #latnivalok_card{
+    .latnivalok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
         height: 24rem;
     }
-    #latnivalok_card h3{
+    .latnivalok_card h3{
         font-size: 1.8rem;
     }
-    #megtekitentesGomb{
+    .megtekitentesGomb{
         padding: 5px;
         margin-top: 15px;
     }
@@ -855,14 +913,14 @@ a:hover{
         padding: 0;
     }
     
-    #ajanlatok_card{
+    .ajanlatok_card{
         border-radius: 10px;
         padding: 1rem;
         margin-bottom: 15px;
         width: 100%;
         height: 24rem;
     }
-    #ajanlatok_card h3{
+    .ajanlatok_card h3{
         font-size: 1.8rem;
     }
     
