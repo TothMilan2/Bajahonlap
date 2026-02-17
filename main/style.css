@@ -241,7 +241,7 @@ a:hover{
 .felfedezesgomb{
     margin-top: 50px;
     justify-self: center;
-    
+    border-radius: 10px;
     width: 250px;
     color: white;
     word-spacing: 70px;
@@ -250,6 +250,11 @@ a:hover{
     font-family: Raleway;
     margin-bottom: 50px;
     height: 40px;
+    transition: 0.5s;
+}
+.felfedezesgomb:hover{
+    opacity: 0.8;
+    transition: 0.6s;
 }
 
 .felfedezesgomb_div{
@@ -258,8 +263,14 @@ a:hover{
 }
 
 
-
-
+#Terkep_link{
+    display: block;
+    width: fit-content;
+}
+#Terkep_link:hover{
+    opacity: 0.8;
+    transition: 0.7s;
+}
 
 
 
