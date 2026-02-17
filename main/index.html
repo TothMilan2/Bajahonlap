@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="dstyle.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
+
+  <button onclick="oldalTetejere()" id="felGomb" title="Fel">
+    <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+        d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+      ></path>
+    </svg>
+  </button>
+
+
   <header style="font-family: Raleway;">
     <nav class="navbar" style="background-color: #11252C;">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="#" style="color:white; font-family: Raleway;">Baja</a>
+        <a class="navbar-brand" href="#" style="color:white;">Baja</a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-  
-  
+
+
       <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto align-items-center">
               <li class="nav-item">
                   <form class="d-flex" role="search">
@@ -27,17 +37,17 @@
                   </form>
               </li>
               <li class="nav-item me-3">
-                  <a class="nav-link active" aria-current="page" href="/changename/Boriszmappa/latnivalok.html" style="color:white;">Látnivalók</a>
+                  <a class="nav-link active"  aria-current="page" href="latnivalok.html" style="color:white;">Látnivalók</a>
               </li>
               <li class="nav-item me-3">
-                  <a class="nav-link" href="/changename/Boriszmappa/ajanlatok.html" style="color:white;">Ajánlatok</a>
+                  <a class="nav-link"  href="ajanlatok.html" style="color:white;">Ajánlatok</a>
               </li>
               <li class="nav-item me-3">
-                  <a class="nav-link" href="/Események/index.html" style="color:white;">Eseménynaptár</a>
+                  <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
               </li>
       </ul>
-  
-  
+
+
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
         style="background-color:#11252C; color:white; width:300px;">
         <div class="offcanvas-header">
@@ -47,10 +57,10 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../changename/Boriszmappa/adatvedelemi.html" style="color:white;">Látnivalók</a>
+              <a class="nav-link active" aria-current="page" href="latnivalok.html" style="color:white;">Látnivalók</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color:white;">Ajánlatok</a>
+              <a class="nav-link" href="ajanlatok.html" style="color:white;">Ajánlatok</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" style="color:white;">Eseménynaptár</a>
@@ -65,13 +75,12 @@
 
     </div>
   </nav>
- 
+
   <section class="fooldal_hatter">
     <h1 id="Baja_cim">Baja</h1>
   </section>
- 
-</header>
 
+  </header>
 
 
       <main>
@@ -153,6 +162,105 @@
            
         </div>
 
+        
+        <div class="container-fluid" style="background-color:#11252C;">
+          <div id="ertekeles_content">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="ertekeles_card">
+
+
+                  <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"></label>
+                  </div>
+
+                  <h4>Látnivalók</h4>
+                  <p>AIOHFHFF</p>
+
+                  <div class="profile">
+                    <img src="" alt="" class="profile-pic">
+                    <span class="username">Bajahonlap</span>
+                    <span class="date">2024-06-01</span>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="ertekeles_card">
+
+
+
+                  <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"></label>
+                  </div>
+
+                  <h4>Látnivalók</h4>
+                  <p>AIOHFHFF</p>
+
+                  <div class="profile">
+                    <img src="" alt="" class="profile-pic">
+                    <span class="username">Bajahonlap</span>
+                    <span class="date">2024-06-01</span>
+                  </div>
+
+
+
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="ertekeles_card">
+
+
+                  <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5"></label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4"></label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3"></label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2"></label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1"></label>
+                  </div>
+
+                  <h4>Látnivalók</h4>
+                  <p>AIOHFHFF</p>
+
+                  <div class="profile">
+                    <img src="" alt="" class="profile-pic">
+                    <span class="username">Bajahonlap</span>
+                    <span class="date">2024-06-01</span>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
 
       </main>
 
@@ -231,5 +339,11 @@
         </div>
       </div>
   </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/felgomb.js"></script>
+
+
 </body>
 </html>

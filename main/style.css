@@ -290,5 +290,23 @@ a:hover{
 
     }
 
+/*Értékelés*/
+#ertekeles_content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.ertekeles_card{
+    background-color: var(--text-color);
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    min-width: 300px;
+    vertical-align: top;
+}
+
+/*Értékelés*/
    
