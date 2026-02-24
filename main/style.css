@@ -278,6 +278,22 @@ a:hover{
     padding: 2rem;
 }
 
+#ertekeles_gomb{
+    color: var(--text-color);
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    width: 15rem;
+    height: 2rem;
+    font-size: 1.2rem;
+}
+
+#ertekeles_gomb:hover{
+    color: var(--a);
+    background-color: white;
+    border: 1px solid var(--a);
+    border-radius: 6px;
+}
 .ertekeles_card{
     background-color: var(--text-color);
     color: black;
