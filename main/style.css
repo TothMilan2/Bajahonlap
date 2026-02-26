@@ -74,7 +74,7 @@ a:hover{
 
 #footer-content{
     padding: 1rem 5rem;
-    background-color: var(--a);
+    background-color: var(--b);
     position: static;
     left: 0;
     bottom: 0;
@@ -120,7 +120,7 @@ a:hover{
 /*ikonok*/
 #footer-icons{
     /*padding: 0 0 0 3.5rem;*/
-    background-color: var(--a);
+    background-color: var(--b);
     position: static;
     left: 0;
     bottom: 0;
@@ -274,73 +274,146 @@ a:hover{
 
 
 /*Értékelés*/
-#ertekeles_content{
-    padding: 2rem;
-}
-
-#ertekeles_gomb{
-    color: var(--text-color);
-    background-color: transparent;
-    border: 1px solid var(--text-color);
-    border-radius: 6px;
-    width: 15rem;
-    height: 2rem;
-    font-size: 1.2rem;
-}
-
-#ertekeles_gomb:hover{
-    color: var(--a);
-    background-color: white;
-    border: 1px solid var(--a);
-    border-radius: 6px;
-}
-.ertekeles_card{
-    background-color: var(--text-color);
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-    margin:0;
-    max-width: 30rem; 
-    margin: 0 auto;
-}
-
-.rating {
-    display: inline-block;
-    opacity: 1;
-}
-
-.rating input {
-    display: none;
-    opacity: 1;
-}
-
-.rating label {
-    float: right;
-    cursor: pointer;
-    color: #ccc;
-    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
-
-.rating label:before {
-    content: '\2605';
-    font-size: 30px;
-    transition: color 0.3s;
-}
-
-.rating input:checked ~ label,
-.rating label:hover,
-.rating label:hover ~ label {
-    color: #ffc300;
-    transform: scale(1.2);
-    transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
-    animation: bounce 0.5s ease-in-out alternate;
-}
-
-@keyframes bounce {
-    to {
-    transform: scale(1.3);
+    #ertekeles_content{
+        padding: 2rem;
     }
-}
+
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+    }
+   
+    button.ertekeles-gomb {
+        width: 12rem;
+        height: auto;
+    }
+   
+    button.ertekeles-gomb .kor {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: var(--b);
+        border-radius: 1.625rem;
+    }
+   
+    button.ertekeles-gomb .kor .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+   
+    button.ertekeles-gomb .kor .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+   
+    button.ertekeles-gomb .kor .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+   
+    button.ertekeles-gomb .gomb-szoveg {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: var(--b);
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+   
+    button:hover .kor {
+        width: 100%;
+    }
+   
+    button:hover .kor .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+    }
+   
+    button:hover .gomb-szoveg {
+        color: #fff;
+    }
+
+
+    .ertekeles_card{
+        background-color: var(--text-color);
+        color: black;
+        border-radius: 10px;
+        padding: 20px;
+        margin:0;
+        max-width: 30rem; 
+        margin: 0 auto;
+    }
+
+    .rating {
+        display: inline-block;
+        opacity: 1;
+    }
+
+    .rating input {
+        display: none;
+        opacity: 1;
+    }
+
+    .rating label {
+        float: right;
+        cursor: pointer;
+        color: #ccc;
+        transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .rating label:before {
+        content: '\2605';
+        font-size: 30px;
+        transition: color 0.3s;
+    }
+
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+        color: #ffc300;
+        transform: scale(1.2);
+        transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+        animation: bounce 0.5s ease-in-out alternate;
+    }
+
+    @keyframes bounce {
+        to {
+        transform: scale(1.3);
+        }
+    }
 /*Értékelés*/
 
 @media (max-width:932px) {
