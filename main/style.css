@@ -24,11 +24,8 @@
 html, body {
     height: fit-content;
     margin: 0;
-    
-
-    
+    padding: 0;
 }
-
 
 
 main {
@@ -74,7 +71,7 @@ a:hover{
 
 #footer-content{
     padding: 1rem 5rem;
-    background-color: var(--b);
+    background-color: #11252C;;
     position: static;
     left: 0;
     bottom: 0;
@@ -102,7 +99,7 @@ a:hover{
     padding: .5em 1em;
     border: none;
     border-radius: 0 6px 6px 0;
-    background-color: var(--s);
+    background-color: var(--a);
     color: #fff;
     font-size: 15px;
     cursor: pointer;
@@ -120,7 +117,7 @@ a:hover{
 /*ikonok*/
 #footer-icons{
     /*padding: 0 0 0 3.5rem;*/
-    background-color: var(--b);
+    background-color: #11252C;;
     position: static;
     left: 0;
     bottom: 0;
@@ -181,36 +178,6 @@ a:hover{
     
     
 }
-@media (max-width:917px) {
-    #Ismerteto{
-      flex-direction: column;
-        padding: 50px;
-
-    }
-    #Ismerteto_kep{
-        
-        margin: auto;
-        width: 100%;
-    }
-    #Ismerteto_szoveg{
-        margin: auto;
-        width: 100%;
-    }
-
-
-}
-@media (max-width:517px) {
-    #kep_felso{
-        width: 100%;
-    }
-    #Ismerteto_kep{
-        
-        margin: 0;
-        
-    }
-}
-
-
 .latnivalok{
     font-family: Raleway;
     background-color: #11252C;
@@ -231,10 +198,146 @@ a:hover{
 
 }
 /*Latnivalók*/
+/*Képek rendezése*/
+    /*párhuzamos*/
+    .img-stack--parallel {
+        display: flex;
+        gap: 0;
+        max-width: 520px;
+        height: 220px;
+        position: relative;         
+        padding: 0 42px;            
+    }
+
+    .img-stack--parallel .img-stack-img {
+        position: relative;
+        width: 50%;
+        height: 100%;
+
+        transform: none;
+        opacity: 0.6;
+        z-index: 1;
+    }
 
 
+    .img-stack--parallel .img-stack-img.is-front {
+        opacity: 1;
+        z-index: 3;
+    }
 
 
+    .img-stack--parallel .img-stack-img:first-child {
+        margin-right: -30px;
+    }
+
+    .img-stack--parallel .img-stack-img:last-child {
+        margin-left: -30px;
+    }
+
+
+    .img-stack--parallel .stack-btn.prev {
+        left: 0;                    
+    }
+
+    .img-stack--parallel .stack-btn.next {
+        right: 0;                   
+    }
+
+/*@media (max-width: 768px) {
+
+  .img-stack--parallel {
+    padding: 0; 
+  }
+
+  .img-stack--parallel .stack-btn {
+    top: auto;
+    bottom: -44px;    
+    transform: none;
+  }
+
+  .img-stack--parallel .stack-btn.prev {
+    left: 35%;
+  }
+
+  .img-stack--parallel .stack-btn.next {
+    right: 35%;
+  }
+}
+@media (max-width: 576px) {
+    .img-stack--parallel {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-stack--parallel .img-stack-img {
+        width: 100%;
+        height: 200px;
+        margin: 0 !important;
+    }
+
+    .img-stack--parallel .stack-btn {
+        bottom: -46px;          
+    }
+}*/
+
+    /*keresztbe*/
+    .img-stack {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+    }
+
+    .img-stack-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+
+    transform: translate(16px,16px);
+    opacity: 0.85;
+    z-index: 1;
+    transition: .25s ease;
+    cursor: pointer;
+    }
+
+    .img-stack-img.is-front {
+    transform: translate(0,0);
+    opacity: 1;
+    z-index: 3;
+    }
+
+    /*gombok*/    
+    .stack-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    }
+
+    .stack-btn.prev { left: -10px; }
+    .stack-btn.next { right: -10px; }
+
+    .stack-btn:hover {
+    background: rgba(0,0,0,0.8);
+    }
+
+    /*keresztbe*/
 /*Felfedezés*/
 
 
@@ -415,6 +518,37 @@ a:hover{
         }
     }
 /*Értékelés*/
+/*Értékelés form*/
+#ertekelesHatter-form{
+    background-image: url(img/ertekelesFormHatter.jpg);
+    background-size: cover;
+    padding: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#ertekeles-form{
+    color: black;
+    background-color: #ffffff;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 600px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+#ertekelesKuldes-gomb{
+        background: linear-gradient(135deg, #d67404, #7a9221);
+        border: none;
+        padding: 12px 35px;
+        border-radius: 10px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: white;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/*Értékelés form*/
 
 @media (max-width:932px) {
     #Baja_cim{
@@ -477,4 +611,89 @@ a:hover{
 
 }
 
-   
+ /*media - xs(0-576) sm(576-768) md(768-992) lg(992-1200) xl(1200-1400)*/
+@media only screen and (max-width: 1200px) {
+    
+}
+@media only screen and (max-width: 1100px) {
+
+}
+@media only screen and (max-width: 992px) {
+
+}
+@media only screen and (max-width: 850px) {
+    
+}
+@media only screen and (max-width: 800px) {
+    
+
+}
+@media only screen and (max-width: 768px) {
+
+    #footer-content{
+        padding: 1rem 2rem 1rem 2rem;
+        background-color: var(--a);
+    }
+
+
+    .img-stack--parallel {
+        padding: 0; 
+      }
+    
+      .img-stack--parallel .stack-btn {
+        top: auto;
+        bottom: -44px;    
+        transform: none;
+      }
+    
+      .img-stack--parallel .stack-btn.prev {
+        left: 35%;
+      }
+    
+      .img-stack--parallel .stack-btn.next {
+        right: 35%;
+      }
+}
+@media only screen and (max-width: 700px) {
+
+
+}
+@media only screen and (max-width: 575px) {
+    .img-stack--parallel {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-stack--parallel .img-stack-img {
+        width: 100%;
+        height: 200px;
+        margin: 0 !important;
+    }
+
+    .img-stack--parallel .stack-btn {
+        bottom: -46px;          
+    }
+}          
+@media only screen and (max-width: 550px) {
+
+ 
+}
+@media only screen and (max-width: 480px) {
+
+
+}
+@media only screen and (max-width: 450px) {
+
+}
+@media only screen and (max-width: 430px) {
+
+}
+@media only screen and (max-width: 392px) {
+
+}
+@media only screen and (max-width: 382px) {
+
+}
+@media only screen and (max-width: 350px) {
+
+}  
