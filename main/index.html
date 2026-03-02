@@ -90,12 +90,16 @@
               <h2>Ismertető</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-4 col-xl-4 col-xxl-4" id="Ismerteto_kep" >
-                <img src="/képek/merged.png" class="mx-auto d-block" id="kep_felso" alt="">
-                
-               
+            <div class="col-12 col-lg-6">
+              <div class="img-stack" data-stack>
+                <img id="img5" src="img/ertekelesFormHatter.jpg" class="img-stack-img is-front">
+                <img id="img6" src="img/ertekelesFormHatter2.jpg" class="img-stack-img">
+
+                <button class="stack-btn prev">‹</button>
+                <button class="stack-btn next">›</button>
+              </div>
             </div>
-  
+          </div>
           </div>
      
         
@@ -154,9 +158,16 @@
 
            </div> 
 
-           <div class="felfedezesgomb_div">
-            <a href="/changename/Boriszmappa/latnivalok.html"><button class="felfedezesgomb" href="">Felfedezes &#8594</button></a>
-           </div>
+           <div class="text-center p-5">
+            <a href="latnivalok.html">
+              <button class="ertekeles-gomb">
+                <span class="kor" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="gomb-szoveg">Felfedezés</span>
+              </button>
+            </a>
+          </div>
           
           
            
@@ -372,7 +383,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/felgomb.js"></script>
-
+  <script src="js/stack.js"></script>
 
 </body>
 </html>
