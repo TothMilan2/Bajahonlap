@@ -360,7 +360,10 @@ a:hover{
     background-color: var(--a);
     padding: 2rem;
 }
-
+#ajanlatokAl_content{
+    background-color: var(--a);
+    padding: 2rem;
+}
 #latnivalokAl_content h1{
     text-align: center;
 }

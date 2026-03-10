@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const res = await fetch("tartalom.json");
+    const res = await fetch("latnivalok.json");
     const data = await res.json();
 
     const place = data.places.find(p => p.id === id);
