@@ -234,4 +234,7 @@ a:hover{
     .row{
         gap: 6%;
     }
+    .center-box{
+        height: 100%;
+    }
 }
