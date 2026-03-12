@@ -218,23 +218,6 @@ a:hover{
     border-radius: 100%;
     width: 3.8rem;
 }
-
-/*#felGomb {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: relative;
-}*/
   
 .svgIcon {
     width: 15px;
@@ -368,94 +351,41 @@ a:hover{
 /*ikonok*/
 /*footer*/
 
-.fooldal_hatter{
-    background-image: url(img/hatter2.jpg);
-    width: 100%;
-    height: 30rem;
-    text-align:center;
-    padding: 3rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    
-}
 
 /*Főoldal*/
-/*Latnivalók*/
-#Ismerteto_kep{ 
-    display: block;
-   align-items: center;
-    width: fit-content;
-    padding: 20px;
-   
-}
-#Ismerteto{
-    display: flex;
-    padding: 50px;
-    justify-content: space-between; 
-    height: 100%;
-    
-    
-}
-.latnivalok{
-    font-family: Raleway;
-    background-color: #11252C;
-    display: flex;
-    color: white;
-    margin-bottom: 10%;
-    height: 50%;
-    padding: 10px;
-}
-.first_text{
-    width: 50%;
-}
+    .fooldal_hatter{
+        background-image: url(img/hatter2.jpg);
+        width: 100%;
+        height: 30rem;
+        text-align:center;
+        padding: 3rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        
+    }
 
+    #fooldal-ismerteto{
+        display: flex;
+        padding: 20px;
+        justify-content: space-between; 
+        height: 100%;
+    }
 
+    #fooldal-latnivalok{
+        color: white;
+        background-color: var(--a);
+        padding: 30px;
+    }
 
-#felfedezes_kepek{
-    padding: 10%;
+    #fooldal-latnivalok2{
+        padding: 30px;
+    }
 
-}
-/*Latnivalók*/
-/*Felfedezés*/
-
-
-.felfedezesgomb{
-    margin-top: 50px;
-    justify-self: center;
-    border-radius: 10px;
-    width: 250px;
-    color: white;
-    word-spacing: 70px;
-    border: 0;
-    background-color: #11252C;
-    font-family: Raleway;
-    margin-bottom: 50px;
-    height: 40px;
-    transition: 0.5s;
-}
-.felfedezesgomb:hover{
-    opacity: 0.8;
-    transition: 0.6s;
-}
-
-.felfedezesgomb_div{
-    display: flex;
-    justify-content: center;
-}
-
-
-#Terkep_link{
-    display: block;
-    width: fit-content;
-}
-#Terkep_link:hover{
-    opacity: 0.8;
-    transition: 0.7s;
-}
-
-
-/*Értékelés*/
+    #fooldal-latnivalok2Kep:hover{
+        transform: translateY(-5px);
+    }
+/*Értékelés főoldal*/
     #ertekeles_content{
         padding: 2rem;
     }
@@ -558,89 +488,89 @@ a:hover{
         max-width: 30rem; 
         margin: 0 auto;
     }
-/*Értékelés*/
+/*Értékelés főoldal*/
 /*Főoldal*/
 
 
 /*Értékelés form*/
-#ertekelesForm-hatter{
-    background-image: url(img/ertekelesFormHatter.jpg);
-    background-size: cover;
-    padding: 1rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-}
+    #ertekelesForm-hatter{
+        background-image: url(img/ertekelesFormHatter.jpg);
+        background-size: cover;
+        padding: 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
 
-#ertekeles-form{
-    color: black;
-    background-color: #ffffff;
-    margin: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 600px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
+    #ertekeles-form{
+        color: black;
+        background-color: #ffffff;
+        margin: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 600px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
 
-#ertekelesKuldes-gomb{
-        background: linear-gradient(135deg, #d67404, #7a9221);
-        border: none;
-        padding: 12px 35px;
-        border-radius: 10px;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        color: white;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-/*Értékelés form*/
-/*Login Form*/
-#loginForm-hatter{
-    background-image: url(img/loginFormHatter.jpg);
-    background-size: cover;
-    padding: 1rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: 1.2rem;
-}
+    #ertekelesKuldes-gomb{
+            background: linear-gradient(135deg, #d67404, #7a9221);
+            border: none;
+            padding: 12px 35px;
+            border-radius: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    /*Értékelés form*/
+    /*Login Form*/
+    #loginForm-hatter{
+        background-image: url(img/loginFormHatter.jpg);
+        background-size: cover;
+        padding: 1rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 1.2rem;
+    }
 
-#login-form{
-    color: black;
-    background-color: #ffffff;
-    margin: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 600px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
+    #login-form{
+        color: black;
+        background-color: #ffffff;
+        margin: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 600px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
 
-#register-form{
-    color: black;
-    background-color: #ffffff;
-    margin: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    max-width: 600px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
+    #register-form{
+        color: black;
+        background-color: #ffffff;
+        margin: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 600px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
 
 
-#loginForm-hatter a{
-    text-decoration:underline;
-    color:var(--link-color);
-}
-#loginForm-hatter a:active{
-    color:var(--link-color);
-}
-#loginForm-hatter a:link{
-    color:var(--link-color);
-}
-#loginForm-hatter a:visited{
-    color: var(--link-color);
-}
-#loginForm-hatter a:hover{
-    color: var(--link-color);
-}
+    #loginForm-hatter a{
+        text-decoration:underline;
+        color:var(--link-color);
+    }
+    #loginForm-hatter a:active{
+        color:var(--link-color);
+    }
+    #loginForm-hatter a:link{
+        color:var(--link-color);
+    }
+    #loginForm-hatter a:visited{
+        color: var(--link-color);
+    }
+    #loginForm-hatter a:hover{
+        color: var(--link-color);
+    }
 /*Login Form*/
 @media (max-width:932px) {
     #Baja_cim{
