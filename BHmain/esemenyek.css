@@ -19,7 +19,7 @@ html, body {
     height: fit-content;
     margin: 0;
     padding: 0;
-    
+    font-family: Raleway;
     
 }
 
@@ -138,6 +138,7 @@ a:hover{
 
 .social-icons a{
     color: white;
+    
 }
 
 .social-icons svg:hover{
