@@ -186,6 +186,7 @@ a:hover{
     width: 150px;
     height: 40px;
     transition: 0.6s;
+    border-radius: 30px;
   }
   #esemenygomb:hover{
     background-color: rgb(65, 64, 64);
