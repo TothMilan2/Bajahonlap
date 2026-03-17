@@ -35,7 +35,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       setText("#p1", place.p1);
       setText("#p2", place.p2);
       setText("#p3", place.p3);
-  
+      setText("#p4", place.p4);
+
       setImg("#img1", place.img1, place.alt1 || place.title);
       setImg("#img2", place.img2, place.alt2 || place.title);
       setImg("#img3", place.img3, place.alt3 || place.title);
