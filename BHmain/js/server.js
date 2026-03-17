@@ -1,5 +1,5 @@
-let keresztnev = document.getElementById("keresztnev");
-let vezeteknev = document.getElementById("vezeteknev");
-let email = document.getElementById("email");
-let jelszo = document.getElementById("uzenet");
-let telefonszam = document.getElementById("kuldesgomb");
+let email=document.getElementById("email").value;
+let password=document.getElementById("registerPassword").value;
+let keresznev=document.getElementById("firstmame").value;
+let vezeteknev=document.getElementById("lastname").value;
+let telefonszam=document.getElementById("phonenumber").value;
