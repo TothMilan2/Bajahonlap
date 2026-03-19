@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -18,11 +19,11 @@
   </button>
 
 
-  <header style="font-family: Raleway;">
+  <header>
     <nav class="navbar" style="background-color: #11252C;">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="index.html" style="color:white; font-family: Raleway;" >Baja</a>
+        <a class="navbar-brand" href="index.html">Baja</a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -178,100 +179,110 @@
           </div>
         </section>
         
-        <section>
-          <div class="container-fluid" style="background-color: #11252C;">
+        <section id="fooldal-ertekeles">
+          <div class="container">
             <h1 style="color: white; text-align: center; font-size: 2.5rem; padding-top: 15px;">Vélemények</h1>
             <div id="ertekeles_content">
-              
-
               
               <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <div class="ertekeles_card">
-  
-  
-                      <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
+                    <div class="review_card">
+
+                      <div class="review_header">
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="rating_badge">5.0</span>
                       </div>
-    
-                      <h4>Látnivalók</h4>
-                      <p>aLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-    
-                      <div class="profile">
-                        <img src="" alt="" class="profile-pic">
-                        <span class="username">Bajahonlap</span>
-                        <span class="date">2024-06-01</span>
+                    
+                      <h3 class="review_title">Látnivalók</h3>
+                    
+                      <p class="review_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris.
+                      </p>
+                    
+                      <div class="review_footer">
+                        <div class="user">
+                          <img src="" alt="" class="avatar">
+                          <div class="user_info">
+                            <span class="name">Bajahonlap</span>
+                            <span class="date">2024.06.01</span>
+                          </div>
+                        </div>
                       </div>
-    
-    
+                    
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="ertekeles_card">
-  
-  
-                      <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
+                    <div class="review_card">
+
+                      <div class="review_header">
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="rating_badge">5.0</span>
                       </div>
-    
-                      <h4>Látnivalók</h4>
-                      <p>bLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-    
-                      <div class="profile">
-                        <img src="" alt="" class="profile-pic">
-                        <span class="username">Bajahonlap</span>
-                        <span class="date">2024-06-01</span>
+                    
+                      <h3 class="review_title">Éttermek</h3>
+                    
+                      <p class="review_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris.
+                      </p>
+                    
+                      <div class="review_footer">
+                        <div class="user">
+                          <img src="" alt="" class="avatar">
+                          <div class="user_info">
+                            <span class="name">Bajahonlap</span>
+                            <span class="date">2024.06.01</span>
+                          </div>
+                        </div>
                       </div>
-    
-    
+                    
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <div class="ertekeles_card">
-  
-  
-                      <div class="rating">
-                        <input type="radio" id="star5" name="rating" value="5">
-                        <label for="star5"></label>
-                        <input type="radio" id="star4" name="rating" value="4">
-                        <label for="star4"></label>
-                        <input type="radio" id="star3" name="rating" value="3">
-                        <label for="star3"></label>
-                        <input type="radio" id="star2" name="rating" value="2">
-                        <label for="star2"></label>
-                        <input type="radio" id="star1" name="rating" value="1">
-                        <label for="star1"></label>
+                    <div class="review_card">
+
+                      <div class="review_header">
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="rating_badge">5.0</span>
                       </div>
-    
-                      <h4>Látnivalók</h4>
-                      <p>cLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-    
-                      <div class="profile">
-                        <img src="" alt="" class="profile-pic">
-                        <span class="username">Bajahonlap</span>
-                        <span class="date">2024-06-01</span>
+                    
+                      <h3 class="review_title">Látnivalók</h3>
+                    
+                      <p class="review_text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris.
+                      </p>
+                    
+                      <div class="review_footer">
+                        <div class="user">
+                          <img src="" alt="" class="avatar">
+                          <div class="user_info">
+                            <span class="name">Bajahonlap</span>
+                            <span class="date">2024.06.01</span>
+                          </div>
+                        </div>
                       </div>
-    
-    
+                    
                     </div>
                   </div>
                 </div>
@@ -320,13 +331,7 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="footer-oszlop3">
                 <h5>Szerzői jogok</h5>
-                <p style="font-size: 0.8rem; margin-bottom: 10px;"><a  href="/changename/Boriszmappa/adatvedelemi.html">Adatvédelmi szabályzat</a></p>
-                <!--<form id="newsletter-form" action="subscribe.php" method="post">
-                    <div class="footer-emailbox">
-                        <input type="email" class="footer-emailmezo" id="email" name="email" placeholder="pelda@mind.fit" autocomplete="off" required>
-                        <input class="footer-emailgomb" value="Küldés" type="submit">
-                    </div>
-                </form>-->
+                <p style="font-size: 0.8rem; margin-bottom: 10px;"><a  href="adatvedelemi.html">Adatvédelmi szabályzat</a></p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="footer-oszlop2">
               <a href="/changename/Boriszmappa/terkep.html" id="Terkep_link"><h5>Elhelyezkedés</h5></a>
