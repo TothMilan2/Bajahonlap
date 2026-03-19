@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (src) el.src = src;
       if (alt) el.alt = alt;
     };
+    const setLink = (selector, url) => {
+      const el = document.querySelector(selector);
+      if (el && url != null) el.href = url;
+    };
   
     if (!id) {
       const content = document.getElementById("ajanlatokAl_content");
@@ -36,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       setText("#p2", place.p2);
       setText("#p3", place.p3);
       setText("#p4", place.p4);
+      setLink("#a1", place.a1)
 
       setImg("#img1", place.img1, place.alt1 || place.title);
       setImg("#img2", place.img2, place.alt2 || place.title);
