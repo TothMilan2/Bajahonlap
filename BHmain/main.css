@@ -387,10 +387,112 @@ a:hover{
     #fooldal-latnivalok2Kep:hover{
         transform: translateY(-5px);
     }
+
 /*Értékelés főoldal*/
-    #ertekeles_content{
-        padding: 2rem;
+    #fooldal-ertekeles{
+        background-color: var(--a);
+        color: white;
+        padding: 30px;
     }
+
+    .review_card {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 22px;
+        max-width: 360px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+      
+     
+    .review_card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #00c6ff, #0072ff);
+    }
+      
+    .review_card:hover {
+        transform: translateY(-6px) scale(1.01);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+      
+    .review_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+      
+    .stars {
+        color: #f5b301;
+        font-size: 14px;
+    }
+      
+    .rating_badge {
+        background: #0072ff;
+        color: white;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+    }
+
+    .review_title {
+        font-size: 20px;
+        margin: 8px 0;
+        color: #111;
+    }
+      
+    .review_text {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+      
+    .review_footer {
+        border-top: 1px solid #eee;
+        padding-top: 14px;
+    }
+      
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+      
+    .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        object-fit: cover;
+        background: linear-gradient(135deg, #0072ff, #00c6ff);
+    }
+      
+    .user_info {
+        display: flex;
+        flex-direction: column;
+    }
+      
+    .name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #222;
+    }
+      
+    .date {
+        font-size: 12px;
+        color: #888;
+    }
+
+
 
     button {
         position: relative;
