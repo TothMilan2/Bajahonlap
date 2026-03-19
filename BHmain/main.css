@@ -636,6 +636,7 @@ a:hover{
         background-repeat: no-repeat;
         background-position: center;
         font-size: 1.2rem;
+        height: 80vh;
     }
 
     #login-form{
@@ -646,6 +647,23 @@ a:hover{
         border-radius: 5px;
         max-width: 600px;
         box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        display: none;
+    }
+
+    #login-btn{
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        border: none;
+        display: inline;
+    }
+
+    #register-btn{
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        border: none;
+        display: inline;
     }
 
     #register-form{
@@ -781,8 +799,12 @@ a:hover{
       }
 }
 @media only screen and (max-width: 700px) {
-
-
+    #fooldal-ertekeles{
+        padding: 20px;
+    }
+    .review_card {
+        max-width: 300px;
+    }
 }
 @media only screen and (max-width: 575px) {
     .img-stack--parallel {
@@ -801,18 +823,28 @@ a:hover{
     }
 }          
 @media only screen and (max-width: 550px) {
-
- 
+    #fooldal-ertekeles{
+        padding: 10px;
+    }
+    .review_card {
+        max-width: 300px;
+    }
 }
 @media only screen and (max-width: 480px) {
-
+    .review_card {
+        max-width: 260px;
+    }
 
 }
 @media only screen and (max-width: 450px) {
-
+    .review_card {
+        max-width: 240px;
+    }
 }
 @media only screen and (max-width: 430px) {
-
+    .review_card {
+        max-width: 220px;
+    }
 }
 @media only screen and (max-width: 392px) {
 
