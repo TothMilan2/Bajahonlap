@@ -20,63 +20,10 @@
 
 
   <header>
-    <nav class="navbar" style="background-color: #11252C;">
-      <div class="container-fluid">
+    
+  <?php include("header.html");?>
 
-        <a class="navbar-brand" href="index.html">Baja</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-      <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto align-items-center">
-              <li class="nav-item">
-                  <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search" id="searchbox"/>
-                    <button class="btn btn-secondary" type="submit" style="margin: 0 1rem 0 0;">Keresés</button>
-                  </form>
-              </li>
-              <li class="nav-item me-3">
-                  <a class="nav-link active"  aria-current="page" href="latnivalok.html" style="color:white;">Látnivalók</a>
-              </li>
-              <li class="nav-item me-3">
-                  <a class="nav-link"  href="ajanlatok.html" style="color:white;">Ajánlatok</a>
-              </li>
-              <li class="nav-item me-3">
-                  <a class="nav-link" href="esemenyek.html" style="color:white;">Eseménynaptár</a>
-              </li>
-      </ul>
-
-
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-        style="background-color:#11252C; color:white; width:300px;">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Baja</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="latnivalok.html" style="color:white;">Látnivalók</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ajanlatok.html" style="color:white;">Ajánlatok</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="esemenyek.html" style="color:white;">Eseménynaptár</a>
-            </li>
-          </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search"/>
-            <button class="btn btn-secondary" type="submit">Keresés</button>
-          </form>
-        </div>
-      </div>
-
-    </div>
-  </nav>
-
+  
   <section class="fooldal_hatter">
     <h1 id="Baja_cim">Baja</h1>
   </section>
