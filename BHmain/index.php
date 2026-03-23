@@ -281,7 +281,7 @@
                 <p style="font-size: 0.8rem; margin-bottom: 10px;"><a  href="adatvedelemi.html">Adatvédelmi szabályzat</a></p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="footer-oszlop2">
-              <a href="/changename/Boriszmappa/terkep.html" id="Terkep_link"><h5>Elhelyezkedés</h5></a>
+              <a href="terkep.html" id="Terkep_link"><h5>Elhelyezkedés</h5></a>
               <iframe src="https://www.google.com/maps?q=6500+Baja,+B%C3%A1cska+t%C3%A9r+1.&output=embed" 
                       width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
