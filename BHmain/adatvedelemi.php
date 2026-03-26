@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="adatvedelmi.css">
 </head>
 <body>
+<?php  include("felgomb.html");?>
     <header>
     <?php  include("header.html");?>
     </header>
@@ -70,6 +71,6 @@
     
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="main.js"></script>
+        <script src="js/felgomb.js"></script>
 </body>
 </html>

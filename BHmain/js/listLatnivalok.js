@@ -3,5 +3,5 @@ document.addEventListener("click", (e) => {
   if (!btn) return;
 
   const id = btn.dataset.id;
-  window.location.href = `latnivalok_petofi.html?id=${encodeURIComponent(id)}`;
+  window.location.href = `latnivalok_aloldal.php?id=${encodeURIComponent(id)}`;
 });
