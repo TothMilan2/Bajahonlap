@@ -1,87 +1,72 @@
 <<?php
-session_start();
-require "database.php";
+  session_start();
+  require "database.php"; 
 
-$login_error = "";
-$register_error = "";
-$success = "";
+  $login_error = "";
+  $register_error = "";
+  $success = "";
 
-// regisztráció
-if (isset($_POST['register'])) {
+  // REGISZTRÁCIÓ
+  if (isset($_POST['register'])) {
+      $firstname = trim($_POST['firstname']);
+      $lastname = trim($_POST['lastname']);
+      $email = trim($_POST['email']); 
+      $phone = trim($_POST['phonenumber']);
+      $password = $_POST['password'];
+      $confirm = $_POST['confirm'];
 
-    $firstname = trim($_POST['firstname']);
-    $lastname = trim($_POST['lastname']);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $phone = trim($_POST['phonenumber']);
-    $password = $_POST['password'];
-    $confirm = $_POST['confirm'];
 
-    if (empty($firstname) || empty($lastname) || empty($email) || empty($password)) {
-        $register_error = "Minden kötelező mezőt tölts ki!";
-    }
-    elseif ($password !== $confirm) {
-        $register_error = "A jelszavak nem egyeznek!";
-    }
-    else {
+      if (empty($firstname) || empty($lastname) || empty($email) || empty($password) || empty($confirm)) {
+          $register_error = "Minden kötelező mezőt tölts ki!";
+      } elseif ($password !== $confirm) {
+          $register_error = "A jelszavak nem egyeznek!";
+      } else {
 
-        // EMAIL ELLENŐRZÉS
-        $check = $conn->prepare("SELECT id FROM felhasznalo WHERE email = ?");
-        $check->bind_param("s", $email);
-        $check->execute();
-        $check->store_result();
+          $check = $conn->prepare("SELECT id FROM felhasznalo WHERE email = ?");
+          $check->bind_param("s", $email);
+          $check->execute();
+          $check->store_result();
 
-        if ($check->num_rows > 0) {
-            $register_error = "Ez az email már létezik!";
-        } else {
+          if ($check->num_rows > 0) {
+              $register_error = "Ez az email már foglalt!";
+          } else {
+              $hashed = password_hash($password, PASSWORD_DEFAULT);
+              $sql = "INSERT INTO felhasznalo (keresztnev, vezeteknev, email, telefonszam, jelszo) VALUES (?, ?, ?, ?, ?)";
+              $stmt = $conn->prepare($sql);
+              $stmt->bind_param("sssss", $firstname, $lastname, $email, $phone, $hashed);
 
-            $hashed = password_hash($password, PASSWORD_DEFAULT);
+              if ($stmt->execute()) {
+                  $success = "Sikeres regisztráció! Jelentkezz be.";
+              } else {
+                  $register_error = "Hiba az adatbázisban!";
+              }
+          }
+      }
+  }
 
-            $sql = "INSERT INTO felhasznalo (keresztnev, vezeteknev, email, telefonszam, jelszo)
-                    VALUES (?, ?, ?, ?, ?)";
-
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssss", $firstname, $lastname, $email, $phone, $hashed);
-
-            if ($stmt->execute()) {
-                $success = "Sikeres regisztráció! Most már bejelentkezhetsz.";
-            } else {
-                $register_error = "Hiba történt!";
-            }
-        }
-    }
-}
-
-// bejelentkezés
-if (isset($_POST['login'])) {
-
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+  if (isset($_POST['login'])) {
+    $email = trim($_POST['email']);
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM felhasznalo WHERE email = ?";
+    $sql = "SELECT id, keresztnev, jelszo FROM felhasznalo WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
-
     $result = $stmt->get_result();
 
     if ($user = $result->fetch_assoc()) {
-
         if (password_verify($password, $user['jelszo'])) {
-
+            
             $_SESSION['user_id'] = $user['id'];
-            $_SESSION['name'] = $user['keresztnev'];
+            $_SESSION['name'] = $user['keresztnev']; 
 
             header("Location: profil.php");
             exit();
-
-        } else {
-            $login_error = "Hibás jelszó!";
         }
-
-    } else {
-        $login_error = "Nincs ilyen felhasználó!";
     }
+    $login_error = "Hibás e-mail cím vagy jelszó!";
 }
+
 ?>
 
 <!DOCTYPE html>
