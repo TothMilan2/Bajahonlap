@@ -242,7 +242,7 @@ s
               </div>
 
               <div class="text-center p-5">
-                <a href="ertekelesForm.html">
+                <a href="http://localhost/Bajahonlap/BHmain/ertekelesForm.php">
                   <button class="ertekeles-gomb">
                     <span class="kor" aria-hidden="true">
                     <span class="icon arrow"></span>
