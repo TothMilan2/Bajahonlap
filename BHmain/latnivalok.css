@@ -514,14 +514,21 @@ a:hover{
 
     /*keresztbe*/
 /*képek rendezése*/
-
-/*Aloldal*/
-#p4{
-    text-align: center;
-    
+/*Események*/
+#esemenyek_main{
+    background-image: url(img/adatvedelemHatter.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: lighten;
+    color: black;
+    margin: 0;
 
 }
-
+/*Események*/
 /*media - xs(0-576) sm(576-768) md(768-992) lg(992-1200) xl(1200-1400)*/
 @media only screen and (max-width: 1200px) {
     #latnivalok_main{

@@ -10,10 +10,7 @@
 </head>
 <body>
     <?php  include("felgomb.html");?>
-
-    <header>
-      <?php  include("header.html");?>
-    </header>
+    <header><?php  include("header.html");?></header>
   
     <main id="ertekelesForm-hatter">
 

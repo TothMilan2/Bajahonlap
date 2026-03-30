@@ -9,23 +9,15 @@
 </head>
 <body id="latnivalok_hatter">
 
-<?php  include("felgomb.html");?>
-
-
-
-  <header> 
-  <?php  include("header.html");?>
-</header>
+  <?php  include("felgomb.html");?>
+  <header><?php  include("header.html");?></header>
 
 
 <main id="ajanlatok_main">
-
-
-
   <div class="container-fluid">
       <div class="row">
           <div class="col-12">
-              <h1 style="font-family: Raleway; font-weight: 600;">Éttermek és vendéglők</h1>
+              <h1 style=" font-weight: 600;">Éttermek és vendéglők</h1>
           </div>
       </div>    
   </div>
@@ -273,11 +265,7 @@
 </main>
 
 
-<?php  include("footer.html");?>
-
-
-
-
+    <?php  include("footer.html");?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/felgomb.js"></script>

@@ -9,14 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body id="latnivalok_hatter">
-
-
+  
     <?php  include("felgomb.html");?>
-
-
-    <header>
-    <?php  include("header.html");?>
-  </header>
+    <header><?php  include("header.html");?></header>
 
 
 
