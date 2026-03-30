@@ -11,12 +11,8 @@
 <body id="latnivalok_hatter">
 
 
-<?php  include("felgomb.html");?>
-
-
-    <header>
-      <?php  include("header.html");?>
-    </header>
+  <?php  include("felgomb.html");?>
+  <header><?php  include("header.html");?></header>
 
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,11 @@
 <body>
 
   <?php  include("felgomb.html");?>
-
-
   <header>
-    
-  <?php  include("header.html");?>
-  <section class="fooldal_hatter">
-    <h1 id="Baja_cim">Baja</h1>
-  </section>
-
+    <?php  include("header.html");?>
+    <section class="fooldal_hatter">
+      <h1 id="Baja_cim">Baja</h1>
+    </section>
   </header>
 
 
@@ -254,7 +250,7 @@
 
       </main>
 
-      <?php include("footer.html");?>
+  <?php include("footer.html");?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/felgomb.js"></script>
