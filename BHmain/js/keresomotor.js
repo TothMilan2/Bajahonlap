@@ -3,41 +3,43 @@ function escapeRegExp(string) {
 }
 
 function searchText() {
+
   let input = document.getElementById("searchbox").value.toLowerCase();
   const content = document.getElementById("fooldal-main");
 
-  if (!input) return;
 
+  if (!input) return;
+  '<span class="highlight">$1</span>'
   content.innerHTML = content.innerHTML.replace(
     /<span class="highlight">(.*?)<\/span>/g,
     '$1'
-  ); // ezt itt még 
+  ); 
 
   const safeInput = escapeRegExp(input);
 
-  const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "gi");
+  const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "i");
 
   // Apply highlight
   content.innerHTML = content.innerHTML.replace(
     regex,
-    '<span class="highlight" style="text-decoration: underline; background-color: red">$1</span>'
+    '<span class="highlight" style="text-decoration: underline;">$1</span>'
   );
 
 
   // Scroll to first match
-  const firstMatch = content.querySelector(".highlight");
+  const talalat = content.querySelector(".highlight");
   
 
-  if (firstMatch) {
+  if (talalat) {
 
-    firstMatch.scrollIntoView({
+    talalat.scrollIntoView({
     behavior: "smooth",
     block: "center"
 
   });
 } 
 else {
-  alert("Hiba");
+  alert("Nem találató");
 } 
 }
 
