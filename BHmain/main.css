@@ -1,12 +1,3 @@
-@font-face {
-    font-family: Raleway;
-    src: url("/Fonts/static/Raleway-Light.ttf");
-}
-@font-face {
-    font-family: Inspiration;
-    src: url("/Fonts/Inspiration-Regular.ttf");
-    font-weight: 500;
-}
 
 :root {
     --a: #11252C;;
