@@ -12,17 +12,10 @@
 
 
 <?php  include("felgomb.html");?>
-
-
-  <header>
-  <?php  include("header.html");?>
-</header>
+<header><?php  include("header.html");?></header>
 
 
 <main id="latnivalok_main">
-
-
-
   <div class="container-fluid">
       <div class="row">
           <div class="col-12">
@@ -32,9 +25,6 @@
   </div>
   <div class="container">
       <div class="row">
-
-
-
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
               <div class="latnivalok_card">
                 <div id="latnivalok_box1">
@@ -226,17 +216,10 @@
       </div>
     </div>
 
-
-
 </main>
 
 
-<?php  include("footer.html");?>
-
-
-
-
-
+    <?php  include("footer.html");?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/felgomb.js"></script> 
     <script src="js/listLatnivalok.js"></script>  
