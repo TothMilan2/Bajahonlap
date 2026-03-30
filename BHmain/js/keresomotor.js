@@ -1,47 +1,46 @@
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function searchText() {
-
-  console.log("Search function called");
   let input = document.getElementById("searchbox").value.toLowerCase();
-  const content = document.getElementById('latnivalok_main');
-
-
-
-
-  content.querySelectorAll("span.highlight").forEach(span => {
-    span.replaceWith(span.textContent);
-  });
-
+  const content = document.getElementById("fooldal-main");
 
   if (!input) return;
-  setTimeout(() => {
-    
-  }, 1000);
+
+  content.innerHTML = content.innerHTML.replace(
+    /<span class="highlight">(.*?)<\/span>/g,
+    '$1'
+  ); // ezt itt még 
+
+  const safeInput = escapeRegExp(input);
+
+  const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "gi");
+
+  // Apply highlight
+  content.innerHTML = content.innerHTML.replace(
+    regex,
+    '<span class="highlight" style="text-decoration: underline; background-color: red">$1</span>'
+  );
+
+
+  // Scroll to first match
+  const firstMatch = content.querySelector(".highlight");
   
-  let innerHTML2 = content.innerHTML;  
-  let regex = new RegExp(`(${input})`, "gi");
 
-  content.innerHTML = innerHTML2.replace(regex, '<span class="highlight">$1</span>');
+  if (firstMatch) {
 
-  setTimeout(() => {
-    let firstMatch = content.querySelector(".highlight");
-    
-    if (firstMatch) {
-      firstMatch.scrollIntoView({
-        behavior: "auto",
-        block: "center"
-    });
-    
+    firstMatch.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
 
-    }
-    
-}, 20);
-
-  
-   
+  });
+} 
+else {
+  alert("Hiba");
+} 
 }
 
 document.getElementById('searchbutton').addEventListener('click', searchText);
-
-
 
 
