@@ -79,10 +79,7 @@
         </div>
     </div>
 
+    <?php  include("footer.html");?>
 
-
-    <footer>
-        <?php  include("footer.html");?>
-    </footer>
 </body>
 </html>
