@@ -35,12 +35,13 @@ $result = $conn->query("SELECT * FROM esemenyek ORDER BY datum ASC");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="latnivalok.css">
     <title>Események</title>
 </head>
 <body>
     <?php  include("felgomb.html");?>
-    <header><?php include("header.html"); ?></header>
+    <header><?php include("header.php"); ?></header>
 
     <main class="esemenyek_main" style="min-height: 80vh;">
         <div class="container py-5 mt-5 text-white">

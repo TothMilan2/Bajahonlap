@@ -1,3 +1,13 @@
+<?php
+session_start();
+require "database.php";
+
+
+$sql = "SELECT e.*, f.keresztnev FROM ertekelesek e 
+        JOIN felhasznalok f ON e.felhasznalo_id = f.id 
+        ORDER BY e.id DESC LIMIT 10";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -12,7 +22,7 @@
 
   <?php  include("felgomb.html");?>
   <header>
-    <?php  include("header.html");?>
+    <?php  include("header.php");?>
     <section class="fooldal_hatter">
       <h1 id="Baja_cim">Baja</h1>
     </section>
@@ -21,52 +31,70 @@
 
       <main id="fooldal-main">
        
-        <section id="fooldal-ismerteto">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7" id="Ismerteto_szoveg">
-                <h2>Ismertető</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <section id="fooldal-ismerteto" class="py-5 bg-light">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-8 mb-4 mb-lg-0" id="Ismerteto_szoveg">
+                <h2 class="display-4 fw-bold  mb-3">Baja</h2>
+                <p class="lead text-dark shadow-text">
+                  Fedezze fel Baját, a Duna-parti ékszerdobozt, ahol a mediterrán hangulat és a vízi élet találkozik! 
+                  A város szíve, a <strong>Szentháromság tér</strong>, Európa egyik legszebb folyóparti főtere, 
+                  amely kaput nyit a Sugovica-öbölre és a Petőfi-szigetre. 
+                </p>
+                <p class="text-secondary">
+                  Baja nemcsak a világhírű, bográcsban főtt halászlé otthona, hanem a Gemenci-erdő kapuja is, 
+                  így a gasztronómia szerelmesei és a természetjárók számára is tökéletes úti cél. 
+                  Ismerje meg vendégszeretetünket, élvezze a part menti naplementét!
+                </p>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 col-xxl-5">
-                <div class="img-stack" data-stack>
-                  <img id="img5" src="img/ertekelesFormHatter.jpg" class="img-stack-img is-front">
-                  <img id="img6" src="img/ertekelesFormHatter2.jpg" class="img-stack-img">
-  
-                  <button class="stack-btn prev">‹</button>
-                  <button class="stack-btn next">›</button>
+
+              <div class="col-lg-4 text-center">
+                <div class="img-stack-container">
+                  <div class="img-stack" data-stack>
+                    <img id="img5" src="img/ertekelesFormHatter.jpg" alt="Baja látkép 1" class="img-stack-img is-front shadow-lg">
+                    <img id="img6" src="img/ertekelesFormHatter2.jpg" alt="Baja látkép 2" class="img-stack-img shadow-lg">
+                    
+                    <div class="stack-controls mt-3">
+                      <button class="stack-btn prev  btn-sm rounded-circle">‹</button>
+                      <button class="stack-btn next  btn-sm rounded-circle">›</button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>            
+            </div>              
           </div>
         </section>
           
      
 
-        <section id="fooldal-latnivalok">
+        <section id="fooldal-latnivalok" class="py-5">
           <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <div class="latnivalok-box">
-                  <img src="img/image 72.png" alt="" class="img-fluid"> 
+            <div class="row g-4"> 
+              <h2 class="text-center fs-1">Fedezze fel Baját</h2>
+              <div class="col-12 col-md-4">
+                <div class="latnivalok-box h-100 shadow-sm p-3">
+                  <img src="img/image 72.png" alt="Türr István-kilátó Baján" class="img-fluid rounded mb-3"> 
                   <h5>Türr István-kilátó</h5>
-                  <p>A Türr István-kilátó Baján található egy szemet gyönyörködtető környezetben, a Duna és Sugovica összefolyásánál. Egy igazán egyedi helyszínt kapott a kilátó a két folyó találkozásánál. </p>
+                  <p>A Türr István-kilátó Baján található egy szemet gyönyörködtető környezetben, a Duna és Sugovica összefolyásánál. Egy igazán egyedi helyszínt kapott a kilátó a két folyó találkozásánál.</p>
                 </div>                
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <div class="latnivalok-box">
-                  <img src="img/image 70.png" alt="" class="img-fluid"> 
+
+              <div class="col-12 col-md-4">
+                <div class="latnivalok-box h-100 shadow-sm p-3">
+                  <img src="img/image 70.png" alt="Petőfi Sándor szobra Baján" class="img-fluid rounded mb-3"> 
                   <h5>Petőfi szobor</h5>
-                  <p>A Petőfi-szobor a bajai Petőfi-szigeten áll, a híres magyar költő, Petőfi Sándor emlékére. A szobor a költőt ábrázolja, és a város egyik jelképe. A látogatók gyakran megállnak itt tiszteletet adni és fényképezkedni. </p>
+                  <p>A Petőfi-szobor a bajai Petőfi-szigeten áll, a híres magyar költő, Petőfi Sándor emlékére. A szobor a költőt ábrázolja, és a város egyik jelképe. A látogatók gyakran megállnak itt tiszteletet adni és fényképezkedni.</p>
                 </div>
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <div class="latnivalok-box">
-                  <img src="img/image 73.png" alt="" class="img-fluid"> 
+
+              <div class="col-12 col-md-4">
+                <div class="latnivalok-box h-100 shadow-sm p-3">
+                  <img src="img/image 73.png" alt="Bajai Szentháromság tér" class="img-fluid rounded mb-3"> 
                   <h5>Szentháromság tér</h5>
-                  <p>A bajai Szentháromság tér a város történelmi és közösségi központja, amely elegáns, mégis barátságos hangulatával azonnal magával ragadja a látogatókat. </p>              
+                  <p>A bajai Szentháromság tér a város történelmi és közösségi központja, amely elegáns, mégis barátságos hangulatával azonnal magával ragadja a látogatókat.</p>               
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -76,7 +104,6 @@
           <div class="container-fluid">
 
             <div class="row">
-  
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 78.png" alt="">
               </div>
@@ -86,8 +113,7 @@
               </div>
             </div>
               
-            <div class="row" >
-              
+            <div class="row"> 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" >
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep"  src="img/image 71.png" alt="" >
               </div>
@@ -97,11 +123,68 @@
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 76.png" alt="" >
               </div>
-  
              </div> 
   
              <div class="text-center p-5">
-              <a href="latnivalok.html">
+              <a href="latnivalok.php">
+                <button class="ertekeles-gomb">
+                  <span class="kor" aria-hidden="true">
+                  <span class="icon arrow"></span>
+                  </span>
+                  <span class="gomb-szoveg">Felfedezés</span>
+                </button>
+              </a>
+            </div>  
+            
+          </div>
+        </section>
+        
+        <section id="fooldal-ertekeles">
+          <div class="container py-5">
+            <h1 class="text-center text-white mb-5">Vélemények</h1>
+            
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <?php 
+                $active = "active";
+                if ($result->num_rows > 0):
+                  while($row = $result->fetch_assoc()): 
+                ?>
+                  <div class="carousel-item <?php echo $active; $active = ""; ?>">
+                    <div class="review_card mx-auto bg-light p-4 rounded shadow-lg" >
+                      <div class="review_header d-flex justify-content-between">
+                        <div class="stars text-warning">
+                          <?php for($i=0; $i<$row['csillag']; $i++) echo '<i class="bi bi-star-fill"></i>'; ?>
+                        </div>
+                        <span class="badge bg-warning text-dark"><?php echo number_format($row['csillag'], 1); ?></span>
+                      </div>
+                      <p class="review_text mt-3 italic text-dark">"<?php echo htmlspecialchars($row['szoveg']); ?>"</p>
+                      <div class="review_footer mt-3">
+                        <div class="user_info">
+                          <span class="name fw-bold"><?php echo htmlspecialchars($row['keresztnev']); ?></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <?php 
+                  endwhile; 
+                else:
+                ?>
+                  <div class="carousel-item active">
+                    <p class="text-center text-white">Még nem érkezett vélemény.</p>
+                  </div>
+                <?php endif; ?>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+
+            <div class="text-center p-5">
+              <a href="ertekeles.php">
                 <button class="ertekeles-gomb">
                   <span class="kor" aria-hidden="true">
                   <span class="icon arrow"></span>
@@ -110,140 +193,8 @@
                 </button>
               </a>
             </div>
-            
-          </div>
-        </section>
-        
-        <section id="fooldal-ertekeles">
-          <div class="container">
-            <h1 style="color: white; text-align: center; font-size: 2.5rem; padding-top: 15px;">Vélemények</h1>
-            <div id="ertekeles_content">
-              
-              <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="review_card">
 
-                      <div class="review_header">
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                        </div>
-                        <span class="rating_badge">5.0</span>
-                      </div>
-                    
-                      <h3 class="review_title">Látnivalók</h3>
-                    
-                      <p class="review_text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris.
-                      </p>
-                    
-                      <div class="review_footer">
-                        <div class="user">
-                          <img src="" alt="" class="avatar">
-                          <div class="user_info">
-                            <span class="name">Bajahonlap</span>
-                            <span class="date">2024.06.01</span>
-                          </div>
-                        </div>
-                      </div>
-                    
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="review_card">
 
-                      <div class="review_header">
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                        </div>
-                        <span class="rating_badge">5.0</span>
-                      </div>
-                    
-                      <h3 class="review_title">Éttermek</h3>
-                    
-                      <p class="review_text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris.
-                      </p>
-                    
-                      <div class="review_footer">
-                        <div class="user">
-                          <img src="" alt="" class="avatar">
-                          <div class="user_info">
-                            <span class="name">Bajahonlap</span>
-                            <span class="date">2024.06.01</span>
-                          </div>
-                        </div>
-                      </div>
-                    
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="review_card">
-
-                      <div class="review_header">
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                        </div>
-                        <span class="rating_badge">5.0</span>
-                      </div>
-                    
-                      <h3 class="review_title">Látnivalók</h3>
-                    
-                      <p class="review_text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris.
-                      </p>
-                    
-                      <div class="review_footer">
-                        <div class="user">
-                          <img src="" alt="" class="avatar">
-                          <div class="user_info">
-                            <span class="name">Bajahonlap</span>
-                            <span class="date">2024.06.01</span>
-                          </div>
-                        </div>
-                      </div>
-                    
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-
-              <div class="text-center p-5">
-                <a href="http://localhost/Bajahonlap/BHmain/ertekelesForm.php">
-                  <button class="ertekeles-gomb">
-                    <span class="kor" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                    </span>
-                    <span class="gomb-szoveg">Értékelés</span>
-                  </button>
-                </a>
-              </div>
-              
-
-            </div>
           </div>
         </section>
 
@@ -256,6 +207,6 @@
   <script src="js/felgomb.js"></script>
   <script src="js/stack.js"></script>
   <script src="js/keresomotor.js"></script>
-
+  <script src="js/sutik.js"></script>
 </body>
 </html>

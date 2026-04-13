@@ -1,0 +1,70 @@
+<nav class="navbar" style="background-color: #11252C;">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="index.php">Baja</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+    </button>
+
+
+  <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto align-items-center">
+          <li class="nav-item">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search" id="searchbox"/>
+                <button class="btn btn-secondary"  type="button" id="searchbutton"  style="margin: 0 1rem 0 0;">Keresés</button>
+              </form>
+          </li>
+          <li class="nav-item me-3">
+              <a class="nav-link active"  aria-current="page" href="latnivalok.php" style="color:white;">Látnivalók</a>
+          </li>
+          <li class="nav-item me-3">
+              <a class="nav-link"  href="ajanlatok.php" style="color:white;">Ajánlatok</a>
+          </li>
+          <li class="nav-item me-3">
+              <a class="nav-link" href="esemenyek.php" style="color:white;">Eseménynaptár</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a href="<?php echo isset($_SESSION['user_id']) ? 'profil.php' : 'login.php'; ?>" 
+              class="nav-link text-white d-flex align-items-center">
+              <i class="bi bi-person fs-4"></i>
+              <span class="d-lg-none ms-2"><?php echo isset($_SESSION['user_id']) ? 'Profilom' : 'Bejelentkezés'; ?></span>
+            </a>
+          </li>
+  </ul>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+    style="background-color:#11252C; color:white; width:300px;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Baja</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="latnivalok.php" style="color:white;">Látnivalók</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ajanlatok.php" style="color:white;">Ajánlatok</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="esemenyek.php" style="color:white;">Eseménynaptár</a>
+        </li>
+        <li class="nav-item ms-lg-3">
+          <a href="<?php echo isset($_SESSION['user_id']) ? 'profil.php' : 'login.php'; ?>" 
+            class="nav-link text-white d-flex align-items-center">
+            <i class="bi bi-person"></i>
+            <span class="d-lg-none ms-2"><?php echo isset($_SESSION['user_id']) ? 'Profilom' : 'Bejelentkezés'; ?></span>
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Keresés" aria-label="Search"/>
+        <button class="btn btn-secondary"  id="searchbutton">Keresés</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+</nav>

@@ -1,34 +1,54 @@
 <?php
-  session_start();
-  require "database.php"; 
+session_start();
+require "database.php"; 
 
-  $login_error = "";
-  $register_error = "";
-  $success = "";
+$login_error = "";
+$register_error = "";
+$success = "";
 
-  // REGISZTRÁCIÓ
-  if (isset($_POST['register'])) {
-      $vezeteknev = trim($_POST['vezeteknev']);
-      $keresztnev = trim($_POST['keresztnev']);
-      $email      = trim($_POST['email']); 
-      $telefonszam = trim($_POST['telefonszam']);
-      $jelszo     = $_POST['jelszo'];
-      $megerosites    = $_POST['megerosites'];
+// REGISZTRÁCIÓ
+if (isset($_POST['register'])) {
+    $vezeteknev = trim($_POST['vezeteknev']);
+    $keresztnev = trim($_POST['keresztnev']);
+    $email      = trim($_POST['email']); 
+    $telefonszam = trim($_POST['telefonszam']);
+    $jelszo     = $_POST['jelszo'];
+    $megerosites = $_POST['megerosites'];
 
-
-      if (empty($vezeteknev) || empty($keresztnev) || empty($email) || empty($jelszo)) {
+    // 1. Alapvető kitöltés ellenőrzése
+    if (empty($vezeteknev) || empty($keresztnev) || empty($email) || empty($jelszo)) {
         $register_error = "Minden kötelező mezőt tölts ki!";
-    } elseif ($jelszo !== $megerosites) {
-        $register_error = "A jelszavak nem egyeznek!";
+    } 
+    // 2. Email formátum ellenőrzése
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $register_error = "Érvénytelen e-mail cím formátum!";
+    }
+    // 3. SZIGORÚ JELSZÓ VALIDÁCIÓ (Ugyanaz, mint a reset_password-nél)
+    elseif (strlen($jelszo) < 8) {
+        $register_error = "A jelszónak legalább 8 karakternek kell lennie!";
+    } elseif (!preg_match('/[A-Z]/', $jelszo)) {
+        $register_error = "A jelszónak tartalmaznia kell legalább egy nagybetűt!";
+    } elseif (!preg_match('/[a-z]/', $jelszo)) {
+        $register_error = "A jelszónak tartalmaznia kell legalább egy kisbetűt!";
+    } elseif (!preg_match('/\d/', $jelszo)) {
+        $register_error = "A jelszónak tartalmaznia kell legalább egy számot!";
+    } elseif (!preg_match('/[\W_]/', $jelszo)) {
+        $register_error = "A jelszónak tartalmaznia kell legalább egy speciális karaktert!";
+    }
+    // 4. Egyezés ellenőrzése
+    elseif ($jelszo !== $megerosites) {
+        $register_error = "A két jelszó nem egyezik meg!";
     } else {
+        // 5. Foglaltság ellenőrzése
         $check = $conn->prepare("SELECT id FROM felhasznalok WHERE email = ?");
         $check->bind_param("s", $email);
         $check->execute();
         $check->store_result();
 
         if ($check->num_rows > 0) {
-            $register_error = "Ez az email már foglalt!";
+            $register_error = "Ez az e-mail cím már regisztrálva van!";
         } else {
+            // SIKERES VALIDÁCIÓ -> MENTÉS
             $hashed = password_hash($jelszo, PASSWORD_DEFAULT);
             $sql = "INSERT INTO felhasznalok (vezeteknev, keresztnev, email, telefonszam, jelszo) VALUES (?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
@@ -41,9 +61,10 @@
             }
         }
     }
-  }
+}
 
-  if (isset($_POST['login'])) {
+// BEJELENTKEZÉS
+if (isset($_POST['login'])) {
     $email = trim($_POST['email']);
     $jelszo = $_POST['jelszo'];
 
@@ -53,7 +74,6 @@
     $stmt->execute();
     $result = $stmt->get_result();
 
-    $login_error = "Hibás e-mail cím vagy jelszó!";
     if ($user = $result->fetch_assoc()) {
         if (password_verify($jelszo, $user['jelszo'])) {
             $_SESSION['user_id'] = $user['id'];
@@ -62,10 +82,10 @@
             exit();
         }
     }
+    // Csak egyszer állítjuk be a hibát, ha nem sikerült a belépés
     $login_error = "Hibás e-mail cím vagy jelszó!";
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -79,47 +99,9 @@
 </head>
 <body>
     <?php  include("felgomb.html");?>
-    <header><?php  include("header.html");?>    </header>
+    <header><?php  include("header.php");?></header>
   
-    <main id="loginForm-hatter">
-
-      <!--Bejelentkezés-->
-        <div class="container-fluid d-flex flex-column align-items-center justify-content-center">          
-          <form class="w-100" id="login-form" method="POST" action="">
-
-          <?php if ($login_error) echo "<div class='alert alert-danger'>$login_error</div>"; ?>
-
-
-              <h1 class="mb-4 text-center">Bejelentkezés</h1>
-              <div class="mb-3">
-                  <label for="email" class="form-label">Email cím</label>
-                  <input type="email" class="form-control" id="email" placeholder="Írd ide az email címed..." name="email" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Jelszó</label>
-                <div class="input-group">
-                    <input type="password" class="form-control" id="loginPassword" placeholder="Írd ide a jelszavadat..."  name="jelszo" required>
-                    <span class="input-group-text" style="cursor:pointer;"
-                        onclick="togglePassword('loginPassword', this.querySelector('i'))">
-                        <i class="bi bi-eye"></i>
-                    </span>
-                </div>
-              </div> 
-              <div class="row">
-                  <div class="col-6">
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"><span>Emlékezz rám.</span>
-                    </label>
-                  </div>
-                  <div class="col-6 text-end">
-                    <a href="#">Elfelejtett jelszó?</a>
-                  </div>
-              </div>    
-              <button type="submit" id="ertekelesKuldes-gomb" name="login" class="d-block">Küldés</button>
-              <p>Még nincs fiókod? <a href="#" id="login-btn">Regisztráció</a>.</p>
-          </form>
-        </div>
-
+    <main id="loginForm-hatter" class="d-flex flex-column align-items-center justify-content-center" style="min-height: 80vh;">
 
         <!--Regisztráció-->
         <div class="container-fluid d-flex flex-column align-items-center justify-content-center">          
@@ -162,7 +144,7 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Jelszó megerősítése</label>
+            <label class="form-label">Jelszó megerősítése</label>
                 <div class="input-group">
                     <input type="password" class="form-control" id="confirmPassword" name="megerosites" placeholder="Írd még egyszer a jelszavadat..." required>
                     <span class="input-group-text" style="cursor:pointer;"
@@ -171,8 +153,43 @@
                     </span>
                 </div>
             </div>
-              <button type="submit" name="register" id="ertekelesKuldes-gomb" class="d-block">Küldés</button>
-              <p>Már van fiókod? <a href="#" id="register-btn">Bejelentkezés</a>.</p>
+            <button type="submit" name="register" id="ertekelesKuldes-gomb" class="d-block w-100">Regisztráció</button>
+            <div class="text-center mt-3">
+                <p>Már van fiókod? <a href="#" id="register-btn">Bejelentkezés</a>.</p>
+            </div>
+          </form>
+        </div>
+
+
+        <!--Bejelentkezés-->
+        <div class="container-fluid d-flex flex-column align-items-center justify-content-center">          
+          <form class="w-100" id="login-form" method="POST" action="">
+
+          <?php if ($login_error) echo "<div class='alert alert-danger'>$login_error</div>"; ?>
+
+
+              <h1 class="mb-4 text-center">Bejelentkezés</h1>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Email cím</label>
+                  <input type="email" class="form-control" id="email" placeholder="Írd ide az email címed..." name="email" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Jelszó</label>
+                <div class="input-group">
+                    <input type="password" class="form-control" id="loginPassword" placeholder="Írd ide a jelszavadat..."  name="jelszo" required>
+                    <span class="input-group-text" style="cursor:pointer;"
+                        onclick="togglePassword('loginPassword', this.querySelector('i'))">
+                        <i class="bi bi-eye"></i>
+                    </span>
+                </div>
+              </div> 
+              <div class="col-12 text-end mb-3">
+                    <a href="forgot_password.php">Elfelejtett jelszó?</a>
+              </div>
+              <button type="submit" id="ertekelesKuldes-gomb" name="login" class="d-block w-100">Bejelentkezés</button>
+              <div class="text-center mt-3">
+                    <p>Még nincs fiókod? <a href="#" id="login-btn">Regisztráció</a>.</p>
+              </div>
           </form>
         </div>
     </main>
