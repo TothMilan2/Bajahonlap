@@ -7,13 +7,9 @@ function searchText() {
   let input = document.getElementById("searchbox").value.toLowerCase();
   const content = document.getElementById("fooldal-main");
 
+  clearSelected();
 
-  if (!input) return;
-  '<span class="highlight">$1</span>'
-  content.innerHTML = content.innerHTML.replace(
-    /<span class="highlight">(.*?)<\/span>/g,
-    '$1'
-  ); 
+
 
   const safeInput = escapeRegExp(input);
 
@@ -42,6 +38,20 @@ else {
   alert("Nem találató");
 } 
 }
+
+
+
+function clearSelected() {
+  const content = document.getElementById("fooldal-main");
+
+  content.innerHTML = content.innerHTML.replace(
+    /<span[^>]*class=["']highlight["'][^>]*>(.*?)<\/span>/g,
+    '$1'
+  );
+}
+
+
+
 
 document.getElementById('searchbutton').addEventListener('click', searchText);
 
