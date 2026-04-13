@@ -12,7 +12,7 @@
 
 
   <?php  include("felgomb.html");?>
-  <header><?php  include("header.html");?></header>
+  <header><?php  include("header.php");?></header>
 
 
 
