@@ -206,7 +206,7 @@ $result = $conn->query($sql);
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/felgomb.js"></script>
   <script src="js/stack.js"></script>
-  <script src="js/keresomotor.js"></script>
+  <script src="js/keresomotor_index.js"></script>
   <script src="js/sutik.js"></script>
 </body>
 </html>

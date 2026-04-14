@@ -13,7 +13,7 @@ function searchText() {
 
   const safeInput = escapeRegExp(input);
 
-  const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "i");
+  const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "gi");
 
   // Apply highlight
   content.innerHTML = content.innerHTML.replace(
