@@ -15,15 +15,15 @@ if (isset($_POST['register'])) {
     $jelszo     = $_POST['jelszo'];
     $megerosites = $_POST['megerosites'];
 
-    // 1. Alapvető kitöltés ellenőrzése
+    
     if (empty($vezeteknev) || empty($keresztnev) || empty($email) || empty($jelszo)) {
         $register_error = "Minden kötelező mezőt tölts ki!";
     } 
-    // 2. Email formátum ellenőrzése
+    
     elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $register_error = "Érvénytelen e-mail cím formátum!";
     }
-    // 3. SZIGORÚ JELSZÓ VALIDÁCIÓ (Ugyanaz, mint a reset_password-nél)
+   
     elseif (strlen($jelszo) < 8) {
         $register_error = "A jelszónak legalább 8 karakternek kell lennie!";
     } elseif (!preg_match('/[A-Z]/', $jelszo)) {
@@ -35,11 +35,11 @@ if (isset($_POST['register'])) {
     } elseif (!preg_match('/[\W_]/', $jelszo)) {
         $register_error = "A jelszónak tartalmaznia kell legalább egy speciális karaktert!";
     }
-    // 4. Egyezés ellenőrzése
+  
     elseif ($jelszo !== $megerosites) {
         $register_error = "A két jelszó nem egyezik meg!";
     } else {
-        // 5. Foglaltság ellenőrzése
+       
         $check = $conn->prepare("SELECT id FROM felhasznalok WHERE email = ?");
         $check->bind_param("s", $email);
         $check->execute();
@@ -48,7 +48,7 @@ if (isset($_POST['register'])) {
         if ($check->num_rows > 0) {
             $register_error = "Ez az e-mail cím már regisztrálva van!";
         } else {
-            // SIKERES VALIDÁCIÓ -> MENTÉS
+           
             $hashed = password_hash($jelszo, PASSWORD_DEFAULT);
             $sql = "INSERT INTO felhasznalok (vezeteknev, keresztnev, email, telefonszam, jelszo) VALUES (?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
@@ -82,7 +82,7 @@ if (isset($_POST['login'])) {
             exit();
         }
     }
-    // Csak egyszer állítjuk be a hibát, ha nem sikerült a belépés
+
     $login_error = "Hibás e-mail cím vagy jelszó!";
 }
 ?>

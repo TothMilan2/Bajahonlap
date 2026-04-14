@@ -43,9 +43,9 @@
 
     //esemény törlése
     if (isset($_POST['esemeny_torles'])) {
-        $review_id = $_POST['review_id'];
-        $del = $conn->prepare("DELETE FROM ertekelesek WHERE id = ? AND felhasznalo_id = ?");
-        $del->bind_param("ii", $review_id, $user_id);
+        $esemeny_id = $_POST['esemeny_id'];
+        $del = $conn->prepare("DELETE FROM mentett_esemenyek WHERE id = ? AND felhasznalo_id = ?");
+        $del->bind_param("ii", $esemeny_id, $user_id);
         $del->execute();
         header("Location: profil.php");
         exit();
@@ -60,9 +60,9 @@
 
     //értékelés törlése
     if (isset($_POST['ertekeles_torles'])) {
-        $review_id = $_POST['review_id'];
+        $ertekeles_id = $_POST['ertekeles_id'];
         $del = $conn->prepare("DELETE FROM ertekelesek WHERE id = ? AND felhasznalo_id = ?");
-        $del->bind_param("ii", $review_id, $user_id);
+        $del->bind_param("ii", $ertekeles_id, $user_id);
         $del->execute();
         header("Location: profil.php");
         exit();
@@ -114,7 +114,7 @@
                                     </div>
                                     <span class="badge bg-info rounded-pill">Mentve</span>
                                     <form method="POST" onsubmit="return confirm('Biztosan törlöd?')">
-                                        <input type="hidden" name="review_id" value="<?php echo $rev['id']; ?>">
+                                        <input type="hidden" name="esemeny_id" value="<?php echo $rev['id']; ?>">
                                         <button type="submit" name="esemeny_torles" class="btn btn-sm btn-outline-danger">Törlés</button>
                                     </form>
                                 </li>
@@ -138,7 +138,7 @@
                                 <span><?php echo htmlspecialchars($rev['szoveg']); ?></span>
                             </div>
                             <form method="POST" onsubmit="return confirm('Biztosan törlöd?')">
-                                <input type="hidden" name="review_id" value="<?php echo $rev['id']; ?>">
+                                <input type="hidden" name="ertekeles_id" value="<?php echo $rev['id']; ?>">
                                 <button type="submit" name="ertekeles_torles" class="btn btn-sm btn-outline-danger">Törlés</button>
                             </form>
                         </div> 
