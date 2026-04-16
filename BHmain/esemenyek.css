@@ -193,9 +193,9 @@ a:hover{
 #esemeny_neve{
     background-image: linear-gradient(#ffffff 0 0);
     background-position: bottom left; 
-    background-size: 100% 2px; /*Adjust the background size to control length and height*/
+    background-size: 100% 2px; 
     background-repeat:no-repeat;
-    padding-bottom: 10px; /* this can also control the position */ 
+    padding-bottom: 10px; 
     width: 100%;
     text-align: left;
 
