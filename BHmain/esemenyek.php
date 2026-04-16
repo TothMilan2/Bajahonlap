@@ -36,11 +36,10 @@ $result = $conn->query("SELECT * FROM esemenyek ORDER BY datum ASC");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="esemenyek.css">
     <title>Események</title>
 </head>
 <body>
-    <?php  include("felgomb.html");?>
     <header><?php include("header.php"); ?></header>
 
     <main class="esemenyek_main" style="min-height: 80vh;">
@@ -79,7 +78,6 @@ $result = $conn->query("SELECT * FROM esemenyek ORDER BY datum ASC");
 
     <?php include("footer.html"); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/felgomb.js"></script>
     <script src="./js/keresomotor_esemenyek.js"></script>
 
 </body>
