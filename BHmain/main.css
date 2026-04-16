@@ -1009,19 +1009,6 @@ a:hover{
         gap: 15%;
     }
 
-@media (max-width: 575px) {
-    #masodiksor{
-        gap: 30px;
-    }
-    #esemenygomb{
-       float: left;
-    }
-    #esemenyek{
-        display: block;
-        justify-content: left;
-    }
-}
-
 
 #esemenykep{
     float: left;
