@@ -621,13 +621,12 @@ a:hover{
     /*Értékelés form*/
     /*Login Form*/
     #loginForm-hatter{
-        background-image: url(img/loginFormHatter.jpg);
+        background-image: url(img/ertekelesFormHatter.jpg);
         background-size: cover;
         padding: 1rem;
         background-repeat: no-repeat;
         background-position: center;
         font-size: 1.2rem;
-        height: 80vh;
     }
 
     #login-form{
@@ -817,9 +816,10 @@ a:hover{
     background-blend-mode: lighten;
     margin: 0;
     padding: 1rem;
-
 }
-#fobpx{
+
+
+#fopox{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -834,7 +834,6 @@ a:hover{
 #latnivalokAl_content h1{
     text-align: center;
 }
-
 
 #kozepre_doboz {
     width: 100rem; 
@@ -952,17 +951,15 @@ a:hover{
     /*keresztbe*/
 /*képek rendezése*/
 /*Események*/
-    #esemenyek_main{
-        background-image: url(img/adatvedelemHatter.jpg);
-        background-position: center;
+    #esemenyek_hatter{
+        background-image: url(img/hatter2.jpg);
         background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-        min-height: 100vh;
-        background-color: rgba(255, 255, 255, 0.2);
-        background-blend-mode: lighten;
-        color: black;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed; 
+        padding: 0;
         margin: 0;
+        height: 100vh;
     }
 
     .center-box {    
@@ -1186,7 +1183,6 @@ a:hover{
 
 }
 @media only screen and (max-width: 768px) {
-
     #footer-content{
         padding: 1rem 2rem 1rem 2rem;
         background-color: var(--a);
@@ -1261,6 +1257,7 @@ a:hover{
     .review_card {
         max-width: 300px;
     }
+
 }
 @media only screen and (max-width: 575px) {
     #latnivalok_main{

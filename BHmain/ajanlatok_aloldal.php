@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baja látnivalók</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-</head>
-<body id="latnivalok_hatter">
+    <link rel="stylesheet" href="main.css">
+  </head>
+<body>
   
     <?php  include("felgomb.html");?>
     <header><?php  include("header.php");?></header>
 
 
 
-  <main id="latnivalokAl_main">
+    <main id="latnivalokAl_main">
     <div id="fobox">
       <div class="container">
-        <div id="ajanlatokAl_content">
-          <a href="http://localhost/Bajahonlap/BHmain/ajanlatok.php"><h5 class="bi bi-box-arrow-left logout-icon"></h5></a>
+        <div id="latnivalokAl_content">
+          <a href="ajanlatok.php"><h5 class="bi bi-box-arrow-left logout-icon"></h5></a>
           <div class="row">
             <div class="col-12">
               <h1 class="text-center mb-4" id="placeTitle">Cím</h1>
-              
             </div>
           </div>
 
@@ -84,7 +83,6 @@
               </div>
             </div>
           </div>
-
           <div class="row align-items-center mb-4">
             <div class="col-12 col-lg-7">
               <a id="a1" href=""><p id="p4"></p></a>
@@ -98,14 +96,7 @@
     </div>
 
     
-  </main>
-
-
-
-
-
-
-
+  </main> 
 
   <?php  include("footer.html");?>
 
