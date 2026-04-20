@@ -106,7 +106,11 @@ $result = $conn->query($sql);
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 78.png" alt="">
+                
+                <div class="textonimage_1"><p>Petőfi sziget</p></div>
+              
               </div>
+             
               
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 77.png"  alt="">
@@ -208,5 +212,6 @@ $result = $conn->query($sql);
   <script src="js/stack.js"></script>
   <script src="js/keresomotor_index.js"></script>
   <script src="js/sutik.js"></script>
+  <script src="js/hoveroverimg.js"></script>
 </body>
 </html>
