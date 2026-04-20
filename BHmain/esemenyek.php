@@ -36,14 +36,15 @@ $result = $conn->query("SELECT * FROM esemenyek ORDER BY datum ASC");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="esemenyek.css">
+    <link rel="stylesheet" href="main.css">
     <title>Események</title>
 </head>
-<body>
+<body id="esemenyek_hatter">
+    <?php  include("felgomb.html");?>
     <header><?php include("header.php"); ?></header>
 
-    <main class="esemenyek_main" style="min-height: 80vh;">
-        <div class="container py-5 mt-5 text-white">
+    <main id="esemenyek_main" style="min-height: 80vh;">
+        <div class="container py-3 mt-3 text-white">
             <h1 class="text-center mb-5">Események és Programok</h1>
             
             <?php if(isset($msg)) echo "<div class='alert alert-info text-center'>$msg</div>"; ?>
@@ -79,6 +80,6 @@ $result = $conn->query("SELECT * FROM esemenyek ORDER BY datum ASC");
     <?php include("footer.html"); ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/keresomotor_esemenyek.js"></script>
-
+    <script src="js/felgomb.js"></script>                  
 </body>
 </html>

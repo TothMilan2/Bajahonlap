@@ -20,7 +20,7 @@
     <div id="fobox">
       <div class="container">
         <div id="latnivalokAl_content">
-          <a href="http://localhost/Bajahonlap/BHmain/latnivalok.php"><h5 class="bi bi-box-arrow-left logout-icon"></h5></a>
+          <a href="latnivalok.php"><h5 class="bi bi-box-arrow-left logout-icon"></h5></a>
           <div class="row">
             <div class="col-12">
               <h1 class="text-center mb-4" id="placeTitle">Cím</h1>
