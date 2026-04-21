@@ -1,59 +1,55 @@
 function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+  
+function searchText() {
+  
+  let input = document.getElementById("searchbox").value.toLowerCase();
+  if (!input.trim()) {
+    alert("Kérlek, írj be valamit a kereséshez!");
+    return;
   }
   
-  function searchText() {
+  const content = document.getElementById("ajanlatok_main");
   
-    let input = document.getElementById("searchbox").value.toLowerCase();
-    const content = document.getElementById("ajanlatok_main");
+  clearSelected();
   
-    clearSelected();
+  const safeInput = escapeRegExp(input);
   
+  const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "gi");
   
+  content.innerHTML = content.innerHTML.replace(
+    regex,
+    '<span class="highlight" style="text-decoration: underline;">$1</span>'
+  );
   
-    const safeInput = escapeRegExp(input);
+  const talalat = content.querySelector(".highlight");
   
-    const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "gi");
-  
-    // Apply highlight
-    content.innerHTML = content.innerHTML.replace(
-      regex,
-      '<span class="highlight" style="text-decoration: underline;">$1</span>'
-    );
-  
-  
-    // Scroll to first match
-    const talalat = content.querySelector(".highlight");
-    
-  
-    if (talalat) {
-  
-      talalat.scrollIntoView({
+  if (talalat) {
+    talalat.scrollIntoView({
       behavior: "smooth",
       block: "center"
-  
     });
-  } 
-  else {
-    alert("Nem találató");
-  } 
+  } else {
+    alert("Nem található");
   }
+}
   
   
   
-  function clearSelected() {
-    const content = document.getElementById("ajanlatok_main");
+function clearSelected() {
+  const content = document.getElementById("ajanlatok_main");
   
-    content.innerHTML = content.innerHTML.replace(
-      /<span[^>]*class=["']highlight["'][^>]*>(.*?)<\/span>/g,
-      '$1'
-    );
-  }
-  
-  
+  content.innerHTML = content.innerHTML.replace(
+    /<span[^>]*class=["']highlight["'][^>]*>(.*?)<\/span>/g,
+    '$1'
+  );
+}
   
   
-  document.getElementById('searchbutton').addEventListener('click', searchText);
+  
+  
+document.getElementById('searchbutton').addEventListener('click', searchText);
   
   
   
