@@ -378,35 +378,32 @@ a:hover{
      #fooldal-latnivalok2Kep{
         transition: 0.2s ease-out;
     } 
-    .textonimage_1 {
+    .textonimage_1,.textonimage_2,.textonimage_3,.textonimage_4,.textonimage_5{ 
         visibility: hidden;
-        position: relative;
-        width: 50%;
-        height: 70%;
+        position: relative  ;
+        width: fit-content;
         top: 10%;
         border: 1px;
         border-radius: 30px;
         transition: 0.2s ease-out;
         left: 50%;
-        transform: translate(-50%, -120%);
+        transform: translate(-90px, -90px);
         color: white;
         font-size: 2rem;
         font-weight:lighter;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
     
-    #fooldal-latnivalok2Kep:hover{
+    /* #fooldal-latnivalok2Kep:hover{
         opacity: 0.8;
         transition: 0.2s ease-in;
         
-    }
+    } */
 
-    #fooldal-latnivalok2Kep:hover + .textonimage_1 {
+    /* #fooldal-latnivalok2Kep:hover + .textonimage_1 {
         visibility: visible;
         transition: 0.2s ease-in;
-        background-color: grey;
-        opacity: 0.7;
-    }
+    } */
 
 /*Értékelés főoldal*/
     #fooldal-ertekeles{

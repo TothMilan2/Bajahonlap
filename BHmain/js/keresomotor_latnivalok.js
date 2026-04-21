@@ -15,7 +15,7 @@ function escapeRegExp(string) {
   
     const regex = new RegExp(`(?![^<]*>)(${safeInput})`, "gi");
   
-    // Apply highlight
+    
     content.innerHTML = content.innerHTML.replace(
       regex,
       '<span class="highlight" style="text-decoration: underline;">$1</span>'
