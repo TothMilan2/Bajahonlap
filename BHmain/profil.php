@@ -83,7 +83,7 @@
 <body>
     <?php include("felgomb.html"); ?>
     <header class="text-white"><?php include("header.php"); ?></header>
-    <div class="container mt-5" style="height: 100vh">
+    <div class="container mt-5" style="min-height: 80vh;">
         <div class="row">
             <div class="card p-4 shadow">
                 <h1>Üdvözöllek, <?php echo htmlspecialchars($user['keresztnev']); ?>!</h1>
@@ -106,7 +106,6 @@
         <div class="row">
             <div class="card p-4 shadow h-100 mt-5">
                 <h3>Mentett eseményeim</h3>
-                <hr>
                 <?php if ($saved_events->num_rows > 0): ?>
                     <ul class="list-group list-group-flush">
                         <?php while ($event = $saved_events->fetch_assoc()): ?>
@@ -115,7 +114,6 @@
                                     <strong><?php echo htmlspecialchars($event['cim']); ?></strong><br>
                                     <small class="text-muted"><?php echo $event['datum']; ?> - <?php echo htmlspecialchars($event['helyszin']); ?></small>
                                 </div>
-                                <span class="badge bg-info rounded-pill">Mentve</span>
                                 <form method="POST" onsubmit="return confirm('Biztosan törlöd?')">
                                     <input type="hidden" name="esemeny_id" value="<?php echo $event['esemeny_id']; ?>">
                                     <button type="submit" name="esemeny_torles" class="btn btn-sm btn-outline-danger">Törlés</button>
