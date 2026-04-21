@@ -1,6 +1,6 @@
 function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  }
+}
   
   function searchText() {
   
@@ -31,29 +31,27 @@ function escapeRegExp(string) {
       talalat.scrollIntoView({
       behavior: "smooth",
       block: "center"
-  
     });
-  } 
-  else {
-    alert("Nem találató");
-  } 
+  } else {
+    alert("Nem található");
   }
+}
   
   
   
-  function clearSelected() {
-    const content = document.getElementById("latnivalok_main");
+function clearSelected() {
+  const content = document.getElementById("latnivalok_main");
   
-    content.innerHTML = content.innerHTML.replace(
-      /<span[^>]*class=["']highlight["'][^>]*>(.*?)<\/span>/g,
-      '$1'
-    );
-  }
-  
-  
+  content.innerHTML = content.innerHTML.replace(
+    /<span[^>]*class=["']highlight["'][^>]*>(.*?)<\/span>/g,
+    '$1'
+  );
+}
   
   
-  document.getElementById('searchbutton').addEventListener('click', searchText);
+  
+  
+document.getElementById('searchbutton').addEventListener('click', searchText);
   
   
   

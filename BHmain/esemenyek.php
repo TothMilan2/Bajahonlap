@@ -60,7 +60,7 @@ $result = $conn->query("SELECT * FROM esemenyek ORDER BY datum ASC");
                         <div class="col-md-7">
                             <h5 class="mb-1 text-info"><?php echo htmlspecialchars($row['cim']); ?></h5>
                             <p class="mb-0 text-light small"><?php echo htmlspecialchars($row['leiras']); ?></p>
-                            <small class="text-secondary">Helyszín: <?php echo htmlspecialchars($row['helyszin']); ?></small>
+                            <small>Helyszín: <?php echo htmlspecialchars($row['helyszin']); ?></small>
                         </div>
                         <div class="col-md-3 text-end">
                             <form method="POST">

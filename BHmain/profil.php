@@ -9,14 +9,14 @@
 
     $user_id = $_SESSION['user_id'];
 
-    //1. felhasználói adatok 
+    //1.Felhasználói adatok lekérése
     $sql = "SELECT * FROM felhasznalok WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
     $user = $stmt->get_result()->fetch_assoc();
 
-    //fiok törlése
+    // Fiók törlése
     if (isset($_POST['fiok_torles'])) {
         $conn->prepare("DELETE FROM mentett_esemenyek WHERE felhasznalo_id = ?")->execute([$user_id]);
         $conn->prepare("DELETE FROM ertekelesek WHERE felhasznalo_id = ?")->execute([$user_id]);
@@ -31,8 +31,8 @@
         exit(); 
     }
 
-    //2. mentett események lekérése
-    $sql_saved = "SELECT e.cim, e.datum, e.helyszin FROM mentett_esemenyek me 
+    //2. Mentett események lekérése
+    $sql_saved = "SELECT e.cim, e.datum, e.helyszin, me.esemeny_id FROM mentett_esemenyek me 
                   JOIN esemenyek e ON me.esemeny_id = e.id 
                   WHERE me.felhasznalo_id = ? 
                   ORDER BY e.datum ASC";
@@ -41,24 +41,26 @@
     $stmt_saved->execute();
     $saved_events = $stmt_saved->get_result();
 
-    //esemény törlése
+    // Mentett esemény törlése
     if (isset($_POST['esemeny_torles'])) {
         $esemeny_id = $_POST['esemeny_id'];
-        $del = $conn->prepare("DELETE FROM mentett_esemenyek WHERE id = ? AND felhasznalo_id = ?");
+        $del = $conn->prepare("DELETE FROM mentett_esemenyek WHERE esemeny_id = ? AND felhasznalo_id = ?");
         $del->bind_param("ii", $esemeny_id, $user_id);
-        $del->execute();
-        header("Location: profil.php");
-        exit();
+        if ($del->execute()) {
+            header("Location: profil.php");
+            exit();
+        } else {
+            echo "Hiba történt: " . $conn->error;
+        }
     }
 
-
-    //3. értékelések lekérése
+    //3. Értékelések lekérése
     $my_reviews = $conn->prepare("SELECT * FROM ertekelesek WHERE felhasznalo_id = ?");
     $my_reviews->bind_param("i", $user_id);
     $my_reviews->execute();
     $reviews_res = $my_reviews->get_result();
 
-    //értékelés törlése
+    // Értékelés törlése
     if (isset($_POST['ertekeles_torles'])) {
         $ertekeles_id = $_POST['ertekeles_id'];
         $del = $conn->prepare("DELETE FROM ertekelesek WHERE id = ? AND felhasznalo_id = ?");
@@ -79,9 +81,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <?php  include("felgomb.html");?>
-    <header class="text-white"><?php  include("header.php");?></header>
-    <div class="container mt-5" style="height: 100vh">
+    <?php include("felgomb.html"); ?>
+    <header class="text-white"><?php include("header.php"); ?></header>
+    <div class="container mt-5" style="min-height: 80vh;">
         <div class="row">
             <div class="card p-4 shadow">
                 <h1>Üdvözöllek, <?php echo htmlspecialchars($user['keresztnev']); ?>!</h1>
@@ -94,7 +96,7 @@
                 <div class="mt-4">
                     <a href="logout.php" class="btn btn-danger">Kijelentkezés</a>
                     <form method="POST" onsubmit="return confirm('Biztosan törlöd?')" class="d-inline">
-                            <button type="submit" name="fiok_torles" class="btn btn-danger">Törlés</button>
+                        <button type="submit" name="fiok_torles" class="btn btn-danger">Törlés</button>
                     </form>
                     <a href="index.php" class="btn btn-secondary">Vissza a főoldalra</a>
                 </div>
@@ -102,36 +104,35 @@
         </div>
 
         <div class="row">
-           <div class="card p-4 shadow h-100 mt-5">
-                    <h3>Mentett eseményeim</h3>
-                    <?php if ($saved_events->num_rows > 0): ?>
-                        <ul class="list-group list-group-flush">
-                            <?php while($event = $saved_events->fetch_assoc()): ?>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <div>
-                                        <strong><?php echo htmlspecialchars($event['cim']); ?></strong><br>
-                                        <small class="text-muted"><?php echo $event['datum']; ?> - <?php echo htmlspecialchars($event['helyszin']); ?></small>
-                                    </div>
-                                    <span class="badge bg-info rounded-pill">Mentve</span>
-                                    <form method="POST" onsubmit="return confirm('Biztosan törlöd?')">
-                                        <input type="hidden" name="esemeny_id" value="<?php echo $rev['id']; ?>">
-                                        <button type="submit" name="esemeny_torles" class="btn btn-sm btn-outline-danger">Törlés</button>
-                                    </form>
-                                </li>
-                            <?php endwhile; ?>
-                        </ul>
-                    <?php else: ?>
-                        <p class="text-muted">Még nem mentettél el egyetlen eseményt sem.</p>
-                    <?php endif; ?>
+            <div class="card p-4 shadow h-100 mt-5">
+                <h3>Mentett eseményeim</h3>
+                <?php if ($saved_events->num_rows > 0): ?>
+                    <ul class="list-group list-group-flush">
+                        <?php while ($event = $saved_events->fetch_assoc()): ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong><?php echo htmlspecialchars($event['cim']); ?></strong><br>
+                                    <small class="text-muted"><?php echo $event['datum']; ?> - <?php echo htmlspecialchars($event['helyszin']); ?></small>
+                                </div>
+                                <form method="POST" onsubmit="return confirm('Biztosan törlöd?')">
+                                    <input type="hidden" name="esemeny_id" value="<?php echo $event['esemeny_id']; ?>">
+                                    <button type="submit" name="esemeny_torles" class="btn btn-sm btn-outline-danger">Törlés</button>
+                                </form>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php else: ?>
+                    <p class="text-muted">Még nem mentettél el egyetlen eseményt sem.</p>
+                <?php endif; ?>
             </div>
         </div>
 
         <div class="row">
-            <div class="card p-4 shadow  h-100 mt-5 mb-5">
+            <div class="card p-4 shadow h-100 mt-5 mb-5">
                 <h3>Saját értékeléseim</h3>
                 <hr>
                 <?php if ($reviews_res->num_rows > 0): ?>
-                    <?php while($rev = $reviews_res->fetch_assoc()): ?>
+                    <?php while ($rev = $reviews_res->fetch_assoc()): ?>
                         <div class="alert alert-secondary d-flex justify-content-between align-items-center">
                             <div>
                                 <strong><?php echo $rev['csillag']; ?> csillag:</strong> 
@@ -148,12 +149,8 @@
                 <?php endif; ?>
             </div>
         </div>
-
-
-
     </div>
 
-    <?php  include("footer.html");?>
-
+    <?php include("footer.html"); ?>
 </body>
 </html>
