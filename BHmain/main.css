@@ -1051,6 +1051,23 @@ a:hover{
 }
   
 /*Adatvédelem*/
+
+/*TextOnImage eltolás*/
+.textonimage_1{
+    margin-left: 10px;
+}
+.textonimage_2{
+    margin-left: 40px;
+}
+.textonimage_3{
+    margin-left: 30px;
+}
+.textonimage_4{
+    margin-left: -10px;
+}
+.textonimage_5{
+    margin-left: 40px;
+}
  /*media - xs(0-576) sm(576-768) md(768-992) lg(992-1200) xl(1200-1400)*/
 @media only screen and (max-width: 1200px) {
     #latnivalok_main{
