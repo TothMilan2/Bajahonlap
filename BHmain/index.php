@@ -107,29 +107,29 @@ $result = $conn->query($sql);
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" >
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 78.png" onmouseover="Hover()" alt="">
                 
-                  <p class="textonimage_1">Petőfi sziget</p>
+                  <p class="textonimage_1">Petőfi-sziget</p>
               
               </div>
              
               
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 77.png" onmouseover="Hover1()" alt="">
-                <p class="textonimage_2"> sziget</p>
+                <p class="textonimage_2"> Sugóhíd</p>
               </div>
             </div>
               
             <div class="row"> 
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" >
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep"  src="img/image 71.png" onmouseover="Hover2()" alt="" >
-                <p class="textonimage_3">Petőfi sziget</p>
+                <p class="textonimage_3">Bagolyvár</p>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 74.png"  onmouseover="Hover3()"alt="">
-                <p class="textonimage_4"> sziget</p>
+                <p class="textonimage_4">Neptun szobor</p>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 76.png" onmouseover="Hover4()" alt="" >
-                <p class="textonimage_5"> sziget</p>
+                <p class="textonimage_5">Jelky tér</p>
               </div>
              </div> 
   
