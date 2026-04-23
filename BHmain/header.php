@@ -24,7 +24,7 @@
           <li class="nav-item me-3">
               <a class="nav-link" href="esemenyek.php" style="color:white;">Eseménynaptár</a>
           </li>
-          <li class="nav-item ms-lg-3">
+          <li class="nav-item me-3">
             <a href="<?php echo isset($_SESSION['user_id']) ? 'profil.php' : 'login.php'; ?>" 
               class="nav-link text-white d-flex align-items-center">
               <i class="bi bi-person fs-4"></i>

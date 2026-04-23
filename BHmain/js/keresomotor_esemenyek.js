@@ -1,6 +1,7 @@
 function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
+
 function searchText() {
 
   let input = document.getElementById("searchbox").value.toLowerCase();
@@ -34,9 +35,6 @@ function searchText() {
   }
 }
   
-
-  
-  
   
 function clearSelected() {
   const content = document.getElementsByClassName("esemenyek_main");
@@ -47,10 +45,4 @@ function clearSelected() {
   );
 }
   
-  
-  
-  
 document.getElementById('searchbutton').addEventListener('click', searchText);
-  
-  
-  

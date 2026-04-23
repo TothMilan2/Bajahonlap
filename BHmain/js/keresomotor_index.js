@@ -30,12 +30,11 @@ function searchText() {
       behavior: "smooth",
       block: "center"
     });
-  } else {
+  } 
+  else {
     alert("Nem található");
   }
 }
-
-
 
 function clearSelected() {
   const content = document.getElementById("fooldal-main");
@@ -46,9 +45,4 @@ function clearSelected() {
   );
 }
 
-
-
-
 document.getElementById('searchbutton').addEventListener('click', searchText);
-
-

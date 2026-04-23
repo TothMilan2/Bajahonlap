@@ -1,7 +1,7 @@
 function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
-  
+
 function searchText() {
   
   let input = document.getElementById("searchbox").value.toLowerCase();
@@ -30,13 +30,12 @@ function searchText() {
       behavior: "smooth",
       block: "center"
     });
-  } else {
+  } 
+  else {
     alert("Nem található");
   }
 }
-  
-  
-  
+
 function clearSelected() {
   const content = document.getElementById("ajanlatok_main");
   
@@ -46,10 +45,4 @@ function clearSelected() {
   );
 }
   
-  
-  
-  
 document.getElementById('searchbutton').addEventListener('click', searchText);
-  
-  
-  

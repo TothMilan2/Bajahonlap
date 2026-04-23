@@ -1,4 +1,3 @@
-
 :root {
     --a: #11252C;;
     --b: #2B3238;
@@ -18,7 +17,6 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
 
 main {
    margin: 0;
@@ -50,7 +48,6 @@ a:visited{
 a:hover{
     color: var(--text-color);
 }
-
 /*Képek rendezése*/
     /*párhuzamos*/
     .img-stack--parallel {
@@ -95,44 +92,6 @@ a:hover{
     .img-stack--parallel .stack-btn.next {
         right: 0;                   
     }
-
-/*@media (max-width: 768px) {
-
-  .img-stack--parallel {
-    padding: 0; 
-  }
-
-  .img-stack--parallel .stack-btn {
-    top: auto;
-    bottom: -44px;    
-    transform: none;
-  }
-
-  .img-stack--parallel .stack-btn.prev {
-    left: 35%;
-  }
-
-  .img-stack--parallel .stack-btn.next {
-    right: 35%;
-  }
-}
-@media (max-width: 576px) {
-    .img-stack--parallel {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .img-stack--parallel .img-stack-img {
-        width: 100%;
-        height: 200px;
-        margin: 0 !important;
-    }
-
-    .img-stack--parallel .stack-btn {
-        bottom: -46px;          
-    }
-}*/
-
     /*keresztbe*/
     .img-stack {
     position: relative;
@@ -193,153 +152,151 @@ a:hover{
     /*keresztbe*/
 /*Képek rendezése*/
 /*fel gomb*/
-#felGomb {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    background-color: var(--base-color);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 100%;
-    width: 3.8rem;
-}
+    #felGomb {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: var(--base-color);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 100%;
+        width: 3.8rem;
+    }
+    
+    .svgIcon {
+        width: 15px;
+        transition-duration: 0.3s;
+    }
+    
+    .svgIcon path {
+        fill: white;
+    }
   
-.svgIcon {
-    width: 15px;
-    transition-duration: 0.3s;
-}
-  
-.svgIcon path {
-    fill: white;
-}
-  
+    #felGomb:hover {
+        border-radius: 40px;
+        width: 7rem;
+        transition-duration: 0.3s;
+        background-color: var(--base-color);
+        align-items: center;
+    }
+    
+    #felGomb:hover .svgIcon {
+        width: 20px; 
+        transition-duration: 0.3s;
+        transform: translateY(-40%);
+    }
+    
+    #felGomb::before {
+        position: absolute;
+        bottom: 20px;
+        content: "Fel";
+        color: white;
+        transition-duration: .3s; 
+        font-size: 0px;
+    }
+    
+    #felGomb:hover::before {
+        font-size: 13px;
+        opacity: 1;
+        bottom: unset;
+        transform: translateY(80%);
+        transition-duration: 0.3s;
+    }
 /*fel gomb*/
-#felGomb:hover {
-    border-radius: 40px;
-    width: 7rem;
-    transition-duration: 0.3s;
-    background-color: var(--base-color);
-    align-items: center;
-}
-  
-#felGomb:hover .svgIcon {
-    width: 20px; 
-    transition-duration: 0.3s;
-    transform: translateY(-40%);
-}
-  
-#felGomb::before {
-    position: absolute;
-    bottom: 20px;
-    content: "Fel";
-    color: white;
-    transition-duration: .3s; 
-    font-size: 0px;
-}
-  
-#felGomb:hover::before {
-    font-size: 13px;
-    opacity: 1;
-    bottom: unset;
-    transform: translateY(80%);
-    transition-duration: 0.3s;
-}
-/*fel gomb*/
-
 /*header*/
-.navbar-toggler {
-    border-color: white; 
-}
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
+    .navbar-toggler {
+        border-color: white; 
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
 /*header*/
 /*footer*/
-#footer-content{
-    padding: 1rem 5rem;
-    background-color: #11252C;;
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+    #footer-content{
+        padding: 1rem 5rem;
+        background-color: #11252C;;
+        position: static;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 
-.footer-emailbox{
-    display: flex;
-    align-items: center;
-}
+    .footer-emailbox{
+        display: flex;
+        align-items: center;
+    }
 
-.footer-emailmezo {
-    min-height: 35px;
-    max-width: 150px;
-    padding: 0 1rem;
-    color: #fff;
-    font-size: 15px;
-    border: 1px solid #fff;
-    border-radius: 6px 0 0 6px;
-    background-color: transparent;
-}
+    .footer-emailmezo {
+        min-height: 35px;
+        max-width: 150px;
+        padding: 0 1rem;
+        color: #fff;
+        font-size: 15px;
+        border: 1px solid #fff;
+        border-radius: 6px 0 0 6px;
+        background-color: transparent;
+    }
 
-.footer-emailgomb {
-    min-height: 10px;
-    padding: .5em 1em;
-    border: none;
-    border-radius: 0 6px 6px 0;
-    background-color: var(--a);
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background-color .3s ease-in-out;
-}
-  
-.footer-emailgomb:hover {
-    background-color: var(--d);
-}
-  
-.input:focus, .input:focus-visible {
-    border-color: #3898EC;
-    outline: none;
-}
-/*ikonok*/
-#footer-icons{
-    /*padding: 0 0 0 3.5rem;*/
-    background-color: #11252C;;
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+    .footer-emailgomb {
+        min-height: 10px;
+        padding: .5em 1em;
+        border: none;
+        border-radius: 0 6px 6px 0;
+        background-color: var(--a);
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background-color .3s ease-in-out;
+    }
+    
+    .footer-emailgomb:hover {
+        background-color: var(--d);
+    }
+    
+    .input:focus, .input:focus-visible {
+        border-color: #3898EC;
+        outline: none;
+    }
+    /*ikonok*/
+    #footer-icons{
+        /*padding: 0 0 0 3.5rem;*/
+        background-color: #11252C;;
+        position: static;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
 
-.social-icons{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    padding: 0;
-}
+    .social-icons{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        padding: 0;
+    }
 
-.social-icons li{
-    padding: 1.5rem 1rem 0 1rem;
-    list-style-type: none;
-}
+    .social-icons li{
+        padding: 1.5rem 1rem 0 1rem;
+        list-style-type: none;
+    }
 
-.social-icons li:first-child{
-    padding-right: 1rem;
-}
+    .social-icons li:first-child{
+        padding-right: 1rem;
+    }
 
-.social-icons a{
-    color: white;
-}
+    .social-icons a{
+        color: white;
+    }
 
-.social-icons svg:hover{
-    color: var(--text-color);
-}
-/*ikonok*/
+    .social-icons svg:hover{
+        color: var(--text-color);
+    }
+    /*ikonok*/
 /*footer*/
 
 
@@ -352,8 +309,7 @@ a:hover{
         padding: 3rem;
         background-repeat: no-repeat;
         background-position: center;
-        position: relative;
-        
+        position: relative;    
     }
 
     #fooldal-ismerteto{
@@ -369,15 +325,14 @@ a:hover{
         padding: 30px;
     }
 
-
-
     #fooldal-latnivalok2{
         padding: 30px;
     }
 
-     #fooldal-latnivalok2Kep{
+    #fooldal-latnivalok2Kep{
         transition: 0.2s ease-out;
     } 
+
     .textonimage_1,.textonimage_2,.textonimage_3,.textonimage_4,.textonimage_5{ 
         visibility: hidden;
         position: relative  ;
@@ -404,7 +359,6 @@ a:hover{
         visibility: visible;
         transition: 0.2s ease-in;
     } */
-
 /*Értékelés főoldal*/
     #fooldal-ertekeles{
         background-color: var(--a);
@@ -509,8 +463,6 @@ a:hover{
         color: #888;
     }
 
-
-
     button {
         position: relative;
         display: inline-block;
@@ -525,6 +477,67 @@ a:hover{
         font-family: inherit;
     }
    
+    button.felfedezes-gomb {
+        width: 12rem;
+        height: auto;
+    }
+   
+    button.felfedezes-gomb .kor {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: var(--b);
+        border-radius: 1.625rem;
+    }
+   
+    button.felfedezes-gomb .kor .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+   
+    button.felfedezes-gomb .kor .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+   
+    button.felfedezes-gomb .kor .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+   
+    button.felfedezes-gomb .gomb-szoveg {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: var(--b);
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
     button.ertekeles-gomb {
         width: 12rem;
         height: auto;
@@ -579,13 +592,13 @@ a:hover{
         bottom: 0;
         padding: 0.75rem 0;
         margin: 0 0 0 1.85rem;
-        color: var(--b);
+        color: white;
         font-weight: 700;
         line-height: 1.6;
         text-align: center;
         text-transform: uppercase;
     }
-   
+
     button:hover .kor {
         width: 100%;
     }
@@ -599,7 +612,6 @@ a:hover{
         color: #fff;
     }
 
-
     .ertekeles_card{
         background-color: var(--text-color);
         color: black;
@@ -611,8 +623,6 @@ a:hover{
     }
 /*Értékelés főoldal*/
 /*Főoldal*/
-
-
 /*Értékelés form*/
     #ertekelesForm-hatter{
         background-image: url(img/ertekelesFormHatter.jpg);
@@ -644,8 +654,8 @@ a:hover{
             transition: all 0.3s ease;
             box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
-    /*Értékelés form*/
-    /*Login Form*/
+/*Értékelés form*/
+/*Login Form*/
     #loginForm-hatter{
         background-image: url(img/ertekelesFormHatter.jpg);
         background-size: cover;
@@ -692,7 +702,6 @@ a:hover{
         box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
 
-
     #loginForm-hatter a{
         text-decoration:underline;
         color:var(--link-color);
@@ -711,167 +720,158 @@ a:hover{
     }
 /*Login Form*/
 /*Ajánlatok*/
-#ajanlatok_main{
-    background-image: url(img/ajanlatokhatter.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    min-height: 100vh;
-    background-color: rgba(255, 255, 255, 0.2);
-    background-blend-mode: lighten;
-    color: black;
-    margin: 0;
-    padding: 0 0 4rem 0;
-    text-align: center;
-}
+    #ajanlatok_main{
+        background-image: url(img/ajanlatokhatter.avif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        min-height: 100vh;
+        background-color: rgba(255, 255, 255, 0.2);
+        background-blend-mode: lighten;
+        color: black;
+        margin: 0;
+        padding: 0 0 4rem 0;
+        text-align: center;
+    }
 
-#ajanlatok_main h1{
-    padding: 2rem 0;
-}
+    #ajanlatok_main h1{
+        padding: 2rem 0;
+    }
 
-.ajanlatok_card{
-    text-align: center;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 15px;
-    width: 100%;
-    background-color: var(--a);
-    color: white;
-}
+    .ajanlatok_card{
+        text-align: center;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        background-color: var(--a);
+        color: white;
+    }
 
-.ajanlatok_card:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    filter: none;
-}
+    .ajanlatok_card:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: none;
+    }
 
-#ajanlatok_box1{
-    height: 4.5rem;
-}
+    #ajanlatok_box1{
+        height: 4.5rem;
+    }
 
-#ajanlatok_box2{
-    height: 16rem;
-}
+    #ajanlatok_box2{
+        height: 16rem;
+    }
 
-#ajanlatok_kep{
-    width: 20rem;
-    height: 12rem;
-}
-
-
-
+    #ajanlatok_kep{
+        width: 20rem;
+        height: 12rem;
+    }
 /*Ajánlatok*/
 /*Látnivalók*/
-#latnivalok_main{
-    background-image: url(img/hatter2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    min-height: 100vh;
-    background-color: rgba(255, 255, 255, 0.2);
-    background-blend-mode: lighten;
-    color: black;
-    margin: 0;
-    padding: 0 0 0rem 0;
-    text-align: center;
-}
+    #latnivalok_main{
+        background-image: url(img/hatter2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        min-height: 100vh;
+        background-color: rgba(255, 255, 255, 0.2);
+        background-blend-mode: lighten;
+        color: black;
+        margin: 0;
+        padding: 0 0 0rem 0;
+        text-align: center;
+    }
 
-#latnivalok_main h1{
-    padding: 2rem 0;
-}
+    #latnivalok_main h1{
+        padding: 2rem 0;
+    }
 
-.latnivalok_card{
-    text-align: center;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 15px;
-    width: 100%;
-    background-color: var(--a);
-    color: white;
-}
+    .latnivalok_card{
+        text-align: center;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 15px;
+        width: 100%;
+        background-color: var(--a);
+        color: white;
+    }
 
-.latnivalok_card:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    filter: none;
-}
+    .latnivalok_card:hover{
+        cursor: pointer;
+        transform: scale(1.02);
+        filter: none;
+    }
 
-#latnivalok_box1{
-    height: 4.5rem;
-}
+    #latnivalok_box1{
+        height: 4.5rem;
+    }
 
-#latnivalok_box2{
-    height: 16rem;
-}
+    #latnivalok_box2{
+        height: 16rem;
+    }
 
-.megtekitentesGomb{
-    background-color: transparent;
-    padding: 5px;
-    color: white;
-    border: 1px solid white;
-    margin-top: 15px;
-}
+    .megtekitentesGomb{
+        background-color: transparent;
+        padding: 5px;
+        color: white;
+        border: 1px solid white;
+        margin-top: 15px;
+    }
 
-.megtekitentesGomb:hover{
-    background-color: white;
-    padding: 5px;
-    color: black;
-    border: 1px solid white;
-    margin-top: 15px;
-}
+    .megtekitentesGomb:hover{
+        background-color: white;
+        padding: 5px;
+        color: black;
+        border: 1px solid white;
+        margin-top: 15px;
+    }
 
-#latnivalok_kep2{
-    width: 20rem;
-    height: 12rem;
-}
-
-
+    #latnivalok_kep2{
+        width: 20rem;
+        height: 12rem;
+    }
 /*Látnivalók*/
 /*Aloldal*/
-#latnivalokAl_main{
-    background-image: url(img/latnivalokAloldalHatter.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    min-height: 100vh;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.2);
-    background-blend-mode: lighten;
-    margin: 0;
-    padding: 1rem;
-}
+    #latnivalokAl_main{
+        background-image: url(img/latnivalokAloldalHatter.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        min-height: 100vh;
+        color: white;
+        background-color: rgba(255, 255, 255, 0.2);
+        background-blend-mode: lighten;
+        margin: 0;
+        padding: 1rem;
+    }
 
 
-#fopox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    #fopox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-#latnivalokAl_content{
-    background-color: var(--a);
-    padding: 2rem;
-    border-radius: 15px;
-}
+    #latnivalokAl_content{
+        background-color: var(--a);
+        padding: 2rem;
+        border-radius: 15px;
+    }
 
-#latnivalokAl_content h1{
-    text-align: center;
-}
+    #latnivalokAl_content h1{
+        text-align: center;
+    }
 
-#kozepre_doboz {
-    width: 100rem; 
-    background-color: var(--b); 
-    border-radius: 10px; 
-    padding: 100px;
-    font-size: 25px;
-}
-
-
-
-
+    #kozepre_doboz {
+        width: 100rem; 
+        background-color: var(--b); 
+        border-radius: 10px; 
+        padding: 100px;
+        font-size: 25px;
+    }
 /*Képek rendezése*/
     /*párhuzamos*/
     .img-stack--parallel {
@@ -893,12 +893,10 @@ a:hover{
         z-index: 1;
     }
 
-
     .img-stack--parallel .img-stack-img.is-front {
         opacity: 1;
         z-index: 3;
     }
-
 
     .img-stack--parallel .img-stack-img:first-child {
         margin-right: -30px;
@@ -907,7 +905,6 @@ a:hover{
     .img-stack--parallel .img-stack-img:last-child {
         margin-left: -30px;
     }
-
 
     .img-stack--parallel .stack-btn.prev {
         left: 0;                    

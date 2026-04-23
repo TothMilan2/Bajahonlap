@@ -2,7 +2,6 @@
 session_start();
 require "database.php";
 
-
 $sql = "SELECT e.*, f.keresztnev FROM ertekelesek e 
         JOIN felhasznalok f ON e.felhasznalo_id = f.id 
         ORDER BY e.id DESC LIMIT 10";
@@ -135,7 +134,7 @@ $result = $conn->query($sql);
   
              <div class="text-center p-5">
               <a href="latnivalok.php">
-                <button class="ertekeles-gomb">
+                <button class="felfedezes-gomb">
                   <span class="kor" aria-hidden="true">
                   <span class="icon arrow"></span>
                   </span>
@@ -197,15 +196,13 @@ $result = $conn->query($sql);
                   <span class="kor" aria-hidden="true">
                   <span class="icon arrow"></span>
                   </span>
-                  <span class="gomb-szoveg">Felfedezés</span>
+                  <span class="gomb-szoveg">Értékelés</span>
                 </button>
               </a>
             </div>
 
-
           </div>
         </section>
-
 
       </main>
 

@@ -1,3 +1,12 @@
+<?php
+session_start();
+require "database.php";
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>

@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   
     <main id="ertekelesForm-hatter" class="py-5">
         <div class="container d-flex justify-content-center">          
-            <form method="POST" class="p-5 card shadow w-50 rounded">
+            <form method="POST" class="p-5 card shadow rounded" style="width: 100%; max-width: 600px; background-color: #fff;">
                 <h1 class="mb-4 text-center">Vélemény írása</h1>
                 
                 <div class="mb-3">
@@ -63,9 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php  include("footer.html");?>
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/felgomb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/felgomb.js"></script>
+    
 </body>
 </html>
