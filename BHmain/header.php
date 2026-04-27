@@ -25,7 +25,7 @@
               <a class="nav-link" href="esemenyek.php" style="color:white;">Eseménynaptár</a>
           </li>
           <li class="nav-item me-3">
-            <a href="<?php echo isset($_SESSION['user_id']) ? 'profil.php' : 'login.php'; ?>" 
+            <a href="profil.php" 
               class="nav-link text-white d-flex align-items-center">
               <i class="bi bi-person fs-4"></i>
               <span class="d-lg-none ms-2"><?php echo isset($_SESSION['user_id']) ? 'Profilom' : 'Bejelentkezés'; ?></span>
@@ -52,8 +52,7 @@
           <a class="nav-link" href="esemenyek.php" style="color:white;">Eseménynaptár</a>
         </li>
         <li class="nav-item ms-lg-3">
-          <a href="<?php echo isset($_SESSION['user_id']) ? 'profil.php' : 'login.php'; ?>" 
-            class="nav-link text-white d-flex align-items-center">
+          <a href="profil.php" class="nav-link text-white d-flex align-items-center">
             <i class="bi bi-person"></i>
             <span class="d-lg-none ms-2"><?php echo isset($_SESSION['user_id']) ? 'Profilom' : 'Bejelentkezés'; ?></span>
           </a>
