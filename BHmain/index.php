@@ -99,6 +99,31 @@ $result = $conn->query($sql);
           </div>
         </section>
         
+        <section id="fooldal-latnivalokAjanlasa" class="py-5">
+          <div class="container-fluid">
+            <div class="row g-4"> 
+              <h2 class="text-center fs-1">Top 3 látnivaló</h2>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" style="background: #2B3238; color: white;  padding: 20px;">
+                              a
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section id="fooldal-latnivalok2">
           <div class="container-fluid">
@@ -106,12 +131,8 @@ $result = $conn->query($sql);
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" >
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 78.png" onmouseover="Hover()" alt="">
-                
                   <p class="textonimage_1">Petőfi-sziget</p>
-              
               </div>
-             
-              
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <img class="mx-auto d-block img-fluid p-2" id="fooldal-latnivalok2Kep" src="img/image 77.png" onmouseover="Hover1()" alt="">
                 <p class="textonimage_2"> Sugóhíd</p>
