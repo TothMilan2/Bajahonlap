@@ -99,31 +99,36 @@ $result = $conn->query($sql);
           </div>
         </section>
         
-        <section id="fooldal-latnivalokAjanlasa" class="py-5">
-          <div class="container-fluid">
-            <div class="row g-4"> 
-              <h2 class="text-center fs-1">Top 3 látnivaló</h2>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" style="background: #2B3238; color: white;  padding: 20px;">
-                              a
+        <section id="fooldal-latnivalokAjanlasa" class="pb-5">
+          <div class="container-fluid p-0">
+              <div class="row g-0"> 
+                  
+                  <div class="col-12 col-md-6">
+                      <img src="img/bajasetanyajanlas.jpg" alt="Sugovica sétány" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
+                  </div>
+                  <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center bg-light" style="min-height: 300px; padding: 40px;">
+                      <h3 class="fs-4 fw-bold">Sugovica part - sétány</h3>
+                      <p class="mb-0">Baja egyik legszebb része, tökéletes helyszín egy esti sétához a vízparton.</p>
+                  </div>
+                  <div class="col-12 col-md-6 order-md-2 text-center d-flex flex-column justify-content-center" style="min-height: 300px; padding: 40px;">
+                      <h3 class="fs-4 fw-bold">Tóth Kálmán szobor</h3>
+                      <p class="mb-0">A város főterének meghatározó alakja, a neves költő és politikus emlékműve.</p>
+                  </div>
+                  <div class="col-12 col-md-6 order-md-1">
+                      <img src="img/tothkalmanszobor2.jpg" alt="Tóth Kálmán szobor" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
+                  </div>
+
+                  <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center bg-dark text-white" style="min-height: 300px; padding: 40px;">
+                      <h3 class="fs-4 fw-bold">Belvárosi hangulat</h3>
+                      <p class="mb-0">Fedezze fel Baja történelmi belvárosának rejtett kincseit!</p>
+                  </div>
+                  <div class="col-12 col-md-6">
+                      <img src="img/belvaros.jpg" alt="Baja belváros" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
+                  </div>
+
               </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                
-              </div>
-            </div>
           </div>
-        </section>
+      </section>
 
         <section id="fooldal-latnivalok2">
           <div class="container-fluid">
@@ -234,7 +239,6 @@ $result = $conn->query($sql);
   <script src="js/felgomb.js"></script>
   <script src="js/stack.js"></script>
   <script src="js/keresomotor_index.js"></script>
-  <script src="js/sutik.js"></script>
   <script src="js/hoveroverimg.js"></script>
 </body>
 </html>

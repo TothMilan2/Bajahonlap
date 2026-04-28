@@ -329,6 +329,10 @@ a:hover{
         padding: 30px;
     }
 
+    #alma{
+        background-color: red;
+    }
+
     #fooldal-latnivalok2Kep{
         transition: 0.2s ease-out;
     } 
