@@ -72,7 +72,7 @@ $result = $conn->query($sql);
             <div class="row g-4"> 
               <h2 class="text-center fs-1">Fedezze fel Baját</h2>
               <div class="col-12 col-md-4">
-                <div class="latnivalok-box h-100 shadow-sm p-3">
+                <div class="h-100 shadow-sm px-4">
                   <img src="img/image 72.png" alt="Türr István-kilátó Baján" class="img-fluid rounded mb-3"> 
                   <h5>Türr István-kilátó</h5>
                   <p>A Türr István-kilátó Baján található egy szemet gyönyörködtető környezetben, a Duna és Sugovica összefolyásánál. Egy igazán egyedi helyszínt kapott a kilátó a két folyó találkozásánál.</p>
@@ -80,7 +80,7 @@ $result = $conn->query($sql);
               </div>
 
               <div class="col-12 col-md-4">
-                <div class="latnivalok-box h-100 shadow-sm p-3">
+                <div class="h-100 shadow-sm px-4">
                   <img src="img/image 70.png" alt="Petőfi Sándor szobra Baján" class="img-fluid rounded mb-3"> 
                   <h5>Petőfi szobor</h5>
                   <p>A Petőfi-szobor a bajai Petőfi-szigeten áll, a híres magyar költő, Petőfi Sándor emlékére. A szobor a költőt ábrázolja, és a város egyik jelképe. A látogatók gyakran megállnak itt tiszteletet adni és fényképezkedni.</p>
@@ -88,7 +88,7 @@ $result = $conn->query($sql);
               </div>
 
               <div class="col-12 col-md-4">
-                <div class="latnivalok-box h-100 shadow-sm p-3">
+                <div class="h-100 shadow-sm px-4">
                   <img src="img/image 73.png" alt="Bajai Szentháromság tér" class="img-fluid rounded mb-3"> 
                   <h5>Szentháromság tér</h5>
                   <p>A bajai Szentháromság tér a város történelmi és közösségi központja, amely elegáns, mégis barátságos hangulatával azonnal magával ragadja a látogatókat.</p>               
@@ -103,21 +103,21 @@ $result = $conn->query($sql);
           <div class="container-fluid p-0">
               <div class="row g-0"> 
                   
-                  <div class="col-12 col-md-6">
-                      <img src="img/bajasetanyajanlas.jpg" alt="Sugovica sétány" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
-                  </div>
                   <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center bg-light" style="min-height: 300px; padding: 40px;">
                       <h3 class="fs-4 fw-bold">Sugovica part - sétány</h3>
                       <p class="mb-0">Baja egyik legszebb része, tökéletes helyszín egy esti sétához a vízparton.</p>
                   </div>
-                  <div class="col-12 col-md-6 order-md-2 text-center d-flex flex-column justify-content-center" style="min-height: 300px; padding: 40px;">
+                  <div class="col-12 col-md-6">
+                      <img src="img/bajasetanyajanlas.jpg" alt="Sugovica sétány" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
+                  </div>
+                  <div class="col-12 col-md-6">
+                      <img src="img/tothkalmanszobor2.jpg" alt="Tóth Kálmán szobor" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
+                  </div>
+                  <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center" style="min-height: 300px; padding: 40px;">
                       <h3 class="fs-4 fw-bold">Tóth Kálmán szobor</h3>
                       <p class="mb-0">A város főterének meghatározó alakja, a neves költő és politikus emlékműve.</p>
                   </div>
-                  <div class="col-12 col-md-6 order-md-1">
-                      <img src="img/tothkalmanszobor2.jpg" alt="Tóth Kálmán szobor" class="img-fluid w-100 h-100" style="object-fit: cover; min-height: 300px;">
-                  </div>
-
+                  
                   <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-center bg-dark text-white" style="min-height: 300px; padding: 40px;">
                       <h3 class="fs-4 fw-bold">Belvárosi hangulat</h3>
                       <p class="mb-0">Fedezze fel Baja történelmi belvárosának rejtett kincseit!</p>
